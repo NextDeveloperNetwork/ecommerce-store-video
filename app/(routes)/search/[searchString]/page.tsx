@@ -6,6 +6,7 @@ import Filter from "./components/filter";
 import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilters from "./components/mobile-filters";
+import Back from "@/components/back";
 
 export const revalidate = 0;
 
@@ -29,18 +30,25 @@ const FilterPage = async ({
         sizeId: searchParams.sizeId
     });
 
-    const sizes = await getSizes();
+    const sizes = await getSizes();``
     const colors = await getColors();
 
     return ( 
         <div className="bg-white">
             <Container>
-                <div className="pt-10 px-4 sm:px-6 lg:px-8 pb-24">
-                    <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-                        <MobileFilters
+           
+            <div className="flex items-center gap-x-3 px-5 py-2">
+      <Back/>
+      <div className="flex-grow "></div>
+                <MobileFilters
                             sizes={sizes}
                             colors={colors}
                         />
+                        </div>
+                <div className="pt-2 px-4 sm:px-6 lg:px-8 pb-24">
+                    <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
+                
+                        
                         <div className="hidden lg:block">
                             <Filter
                                 valueKey="sizeId"
@@ -55,7 +63,7 @@ const FilterPage = async ({
                         </div>
                         <div className="mt-6 lg:col-span-4 lg:mt-0">
                             {products.length === 0 && <NoResults />}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                                 {products.map((item) => (
                                     <ProductCard 
                                         key={item.id}
