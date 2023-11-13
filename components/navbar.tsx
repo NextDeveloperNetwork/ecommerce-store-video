@@ -1,15 +1,14 @@
 
 
 import Link from "next/link";
-import { redirect } from "next/navigation";
+
 import MainNav from "@/components/main-nav";
 import Container from "@/components/ui/container";
 import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
-import SearchInput from "@/components/search-input"
+
 import MobileFilters from "./category-filter";
-import SearchBar from "@/components/search-bar"
-import SE from "./search-element";
+
 import NavbarSearch from "@/components/search-bar/navbar-search";
 
 
