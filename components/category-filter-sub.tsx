@@ -61,28 +61,28 @@ const MobileFiltersC: React.FC<MobileFiltersProps> = ({
 <h4 className="text-xl font-semibold text-black-500">Socials</h4> {/* Red color */}
 
 <div className="flex items-center">
-<a href="https://www.facebook.com/your-store-url" target="_blank" rel="noopener noreferrer">
+<a href="https://www.facebook.com/profile.php?id=61553134485424" target="_blank" rel="noopener noreferrer">
 <div className="flex items-center"> {/* Added this container */}
 <FaFacebook className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-<span>-facebook: EDI Dyqan</span>
+<span>-Facebook: EdiStore</span>
 </div>
 </a>
 </div>
 
 <div className="flex items-center">
-<a href="https://www.instagram.com/your-store-url" target="_blank" rel="noopener noreferrer">
+<a href="https://www.instagram.com/edistoreal" target="_blank" rel="noopener noreferrer">
 <div className="flex items-center"> {/* Added this container */}
 <FaInstagram className="text-blue-500 hover:text-blue-600 hover:animate-spin" /> 
-<span>-Instagram: EDI_STORE</span>
+<span>-Instagram: EdiStoreAl</span>
 </div>
 </a>
 </div> {/* Blue color with hover effect */}
 
 <div className="flex items-center">
-<a href="https://www.tiktok.com/your-store-url" target="_blank" rel="noopener noreferrer">
+<a href="https://www.tiktok.com/@edistoreal" target="_blank" rel="noopener noreferrer">
 <div className="flex items-center"> {/* Added this container */}
 <FaTiktok className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-<span>-tik tok: EDI_STORE</span>
+<span>-Tik tok: edistoreal</span>
 </div>
 </a>
 </div> {/* Blue color with hover effect */}

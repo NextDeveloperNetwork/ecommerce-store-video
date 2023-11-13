@@ -12,7 +12,7 @@ const useMessage = (): MessageHook => {
     const articleLink = window.location.href;
 
     // Construct the Messenger conversation link with article details
-    const messengerConversationLink = `http://m.me/101041494968868/?ref=INTENCION&messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0&text=Porosit%20kete%20artikull:%0AName:%20${item.name}%0ADescription:%20${item.description}%0AColor:%20${item.color.name}%0ASize:%20${item.size.name}%0AArticle%20link:%20${articleLink}`;
+    const messengerConversationLink = `http://m.me/61553134485424/?ref=INTENCION&messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0&text=Porosit%20kete%20artikull:%0AArtikull:%20${item.name}%0APershkrim:%20${item.description}%0ANgjyra:%20${item.color.name}%0AModel:%20${item.size.name}%0AArticle%20link:%20${articleLink}`;
 
     // Open the Messenger conversation link
     window.open(messengerConversationLink, '_blank');

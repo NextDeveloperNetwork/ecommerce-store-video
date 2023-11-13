@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTiktok, FaInfo, FaAndroid, FaApple } from 'react-icons/fa';
 
@@ -12,7 +13,7 @@ const Footer = () => {
             <FaPhone className="mr-2" /> +355 698822191
           </div>
           <div className="flex items-center py-2">
-            <FaEnvelope className="mr-2" /> @gmail.com
+            <FaEnvelope className="mr-2" /> store.edi.al@gmail.com
           </div>
           <div className="flex items-center py-2">
             <FaMapMarkerAlt className="mr-2" /> Tirane, Autostrada Durres-Rrogozhine
@@ -24,28 +25,28 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-red-500">Socials</h4>
 
           <div className="flex items-center py-2">
-            <a href="https://www.facebook.com/your-store-url" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61553134485424" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center"> {/* Added this container */}
                    <FaFacebook className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-                   <span className='px-2'> FACEBOOK MARKET </span>
+                   <span className='px-2'> EdiStore </span>
                 </div>
             </a>
           </div>
 
           <div className="flex items-center py-2">
-    <a href="https://www.instagram.com/your-store-url" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/edistoreal" target="_blank" rel="noopener noreferrer">
       <div className="flex items-center"> {/* Added this container */}
         <FaInstagram className="text-blue-500 hover:text-blue-600 hover:animate-spin" /> 
-        <span className='px-2'>INSTA_MARKET</span>
+        <span className='px-2'>EdiStoreAl</span>
       </div>
     </a>
   </div> {/* Blue color with hover effect */}
 
   <div className="flex items-center py-2">
-    <a href="https://www.tiktok.com/your-store-url" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.tiktok.com/@edistoreal" target="_blank" rel="noopener noreferrer">
       <div className="flex items-center"> {/* Added this container */}
         <FaTiktok className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-        <span className='px-2'>TT_MARKET</span>
+        <span className='px-2'>edistoreal</span>
       </div>
     </a>
   </div> {/* Blue color with hover effect */}
@@ -54,15 +55,21 @@ const Footer = () => {
         {/* Column 3: About Us */}
         <div className="text-center md:text-left">
           <h4 className="text-xl font-semibold text-red-500">About Us</h4>
+          <Link href={'/dergesat'}>
           <div className="flex items-center py-2">
             <FaInfo className="mr-2" /> DERGESAT
           </div>
+          </Link>
+          <Link href={'/rregullore'}>
           <div className="flex items-center py-2">
             <FaInfo className="mr-2" /> RREGULLORE
           </div>
+          </Link>
+          <Link href={'/kthime'}>
           <div className="flex items-center py-2">
             <FaInfo className="mr-2" /> KTHIMET
           </div>
+          </Link>
         </div>
 
         {/* Column 4: Download App */}

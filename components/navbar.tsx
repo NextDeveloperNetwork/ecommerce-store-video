@@ -31,7 +31,7 @@ const Navbar = async () => {
         <MobileFilters categories={categories} />
         
           <Link href="/" className="flex items-center gap-x-2">
-            <p className="font-bold text-xl px-2 "> Market</p>
+            <p className="font-bold text-xl px-2 ">Edi-Store</p>
           </Link>
           <div className="hidden md:flex"> {/* Hide on screens smaller than md (medium) */}
             <MainNav data={categories} />
