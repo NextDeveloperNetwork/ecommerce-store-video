@@ -48,7 +48,7 @@ const Filter = ({
             <h3 className="text-lg font-semibold">{name}</h3>
             <hr className="my-4" />
             <div className="flex flex-wrap gap-2">
-                {data.map((filter) => (
+                {data?.map((filter) => (
                     <div key={filter.id} className="flex items-center">
                         <Button
                             className={cn(

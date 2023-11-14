@@ -1,12 +1,14 @@
-import getColors from "@/actions/get-colors";
+
 import getProducts from "@/actions/get-products";
-import getSizes from "@/actions/get-sizes";
+
 import Container from "@/components/ui/container";
 import Filter from "./components/filter";
 import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilters from "./components/mobile-filters";
 import Back from "@/components/back";
+import getSizesSearch from "@/actions/get-sizes-search";
+import getColorsSearch from "@/actions/get-colors-search";
 
 export const revalidate = 0;
 
@@ -30,8 +32,13 @@ const FilterPage = async ({
         sizeId: searchParams.sizeId
     });
 
-    const sizes = await getSizes();``
-    const colors = await getColors();
+    const sizes = await getSizesSearch({
+        searchValue: params.searchString
+    });
+
+    const colors = await getColorsSearch({
+        searchValue: params.searchString
+    });
 
     return ( 
         <div className="bg-white">
