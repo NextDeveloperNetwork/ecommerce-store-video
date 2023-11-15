@@ -6,6 +6,7 @@ import Container from "@/components/ui/container";
 
 
 
+
 export const revalidate = 0;
 
 const HomePage = async () => {
@@ -14,9 +15,6 @@ const HomePage = async () => {
 
   return (
     <Container>
-    <div className="flex items-center justify-center mt-2">
-  
-</div>
       <div className="space-y-10 pb-10">
         <Billboard 
           data={billboard}
@@ -27,6 +25,7 @@ const HomePage = async () => {
       </div>
     </Container>
   )
+  
 };
 
 export default HomePage;

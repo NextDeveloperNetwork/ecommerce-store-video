@@ -8,13 +8,7 @@ import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
 
 import MobileFilters from "./category-filter";
-
-import NavbarSearch from "@/components/search-bar/navbar-search";
-
-
-
-
-
+import NavbarSearch from "./search-bar/navbar-search";
 
 
 const Navbar = async () => {
@@ -24,25 +18,23 @@ const Navbar = async () => {
  
   return (
     <div className="border-b sticky top-0 bg-white z-10">
-
-      <Container>
-      
-        <div className="mx-auto max-w-7xl  relative flex h-16 items-center px-4 justify-between">
-        <MobileFilters categories={categories} />
-        
-          <Link href="/" className="flex items-center gap-x-2">
-            <p className="font-bold text-xl px-2 ">Edi-Store</p>
-          </Link>
-          <div className="hidden md:flex"> {/* Hide on screens smaller than md (medium) */}
-            <MainNav data={categories} />
-          </div>
-          <div className="flex-grow "></div> {/* Pushes elements to the left */}
-       
-          <NavbarSearch/>
-          <NavbarActions />
-        </div>
-      </Container>
+  <Container>
+    <div className="mx-auto max-w-7xl relative flex h-12 items-center px-4 justify-between">
+      <MobileFilters categories={categories} />
+      <Link href="/" className="flex items-center gap-x-2">
+        <img src="images/favicon.png" alt="Market Logo" className="h-16 w-16" />
+      </Link>
+      <div className="hidden md:flex">
+        {/* Hide on screens smaller than md (medium) */}
+        <MainNav data={categories} />
+      </div>
+      <div className="flex-grow"></div>
+      <NavbarSearch />
+      <NavbarActions />
     </div>
+    
+  </Container>
+</div>
   );
 
 };

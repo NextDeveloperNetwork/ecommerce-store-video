@@ -31,7 +31,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
     <>
     <Button className="flex items-center rounded-full bg-black px-2 py-2"onClick={onOpen} >
     {<MenuIcon  
-    size={15}
+    size={20}
     color="white" />} 
     </Button>
     
