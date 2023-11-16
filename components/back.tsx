@@ -9,8 +9,8 @@ const handleGoBack = () => {
 
 const Back=()=>{
     return(
-        <div className="px-5 py-2">
-<Button onClick={handleGoBack}>
+        <div className="px-0 py-2">
+<Button  onClick={handleGoBack}>
 {<FiChevronLeft  
     size={15}
     color="white"

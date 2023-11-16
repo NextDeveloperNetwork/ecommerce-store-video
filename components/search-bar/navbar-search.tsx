@@ -34,16 +34,16 @@ const NavbarSearch = () => {
           <input
             type="search"
             id="default-search"
-            className="w-64 p-2 pl-14 text-base text-gray-400 border border-black rounded-full focus:ring-1 focus:ring-gray-200 focus:border-gray-500 outline-none"
+            className="w-64 p-2 pl-14 text-base text-gray-600 border bg-gray-100 rounded-full focus:ring-1 focus:ring-gray-200 focus:border-gray-400 outline-none"
             placeholder="Search..."
             {...form.register('search')}
           />
           <button
             type="submit"
-            className="absolute left-4  p-1.5 bg-blue-600 hover:bg-blue-300 focus:outline-none rounded-full border border-black"
+            className="absolute left-4  p-1.5 bg-grey-300 hover:bg-blue-200 focus:outline-none rounded-full border "
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-black"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

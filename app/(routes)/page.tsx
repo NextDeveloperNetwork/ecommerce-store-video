@@ -3,6 +3,7 @@ import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
+import Banner from "@/components/baners";
 
 
 
@@ -11,7 +12,7 @@ export const revalidate = 0;
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard("81220c10-79b0-492a-9eb6-5d60fe6258c6");
+  const billboard = await getBillboard("69571ce7-2494-47da-8541-2655cfb066c7");
 
   return (
     <Container>
@@ -20,7 +21,7 @@ const HomePage = async () => {
           data={billboard}
         />
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-          <ProductList title="Featured Products" items={products} />
+          <ProductList title="Produkte" items={products} />
         </div>
       </div>
     </Container>
