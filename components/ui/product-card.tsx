@@ -40,7 +40,12 @@ const ProductCard: React.FC<ProductCard> = ({
     cart.addItem(data);
   };
   
+  const maxCharacters = 25; // Set the maximum number of characters
 
+  const truncatedDescription =
+    data.description && data.description.length > maxCharacters
+      ? `${data.description.substring(0, maxCharacters)}...`
+      : data.description;
   
   return ( 
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
@@ -65,7 +70,8 @@ const ProductCard: React.FC<ProductCard> = ({
       {/* Description */}
       <div>
         <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        <p className="text-sm text-gray-500">{truncatedDescription}</p>
+     
       </div>
       {/* Price & Reiew */}
       <div className="flex items-center justify-between">

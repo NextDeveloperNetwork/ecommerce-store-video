@@ -11,6 +11,8 @@ interface Query {
   colorId?: string;
   sizeId?: string;
   isFeatured?: boolean;
+  isOffered?: boolean;
+  isUndercost?: boolean;
   searchValue?: string;
   description?: string; 
 }
@@ -26,6 +28,8 @@ const getProducts = async (query: Query): Promise<Product[]> => {
       subcategoryId: query.subcategoryId,
       searchValue: query.searchValue,
       isFeatured: query.isFeatured,
+      isOffered: query.isOffered,
+      isUndercost: query.isUndercost,
       description: query.description, 
     },
   });

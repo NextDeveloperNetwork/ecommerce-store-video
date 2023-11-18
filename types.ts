@@ -7,6 +7,8 @@ export interface Product {
     price: string;
     quantity: number;
     isFeatured: boolean;
+    isOffered: boolean;
+    isUndercost: boolean;
     size: Size;
     color: Color;
     images: Image[]
