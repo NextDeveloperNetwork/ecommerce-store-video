@@ -26,7 +26,7 @@ const EdiStoreReturns = async () => {
         <p className="mb-4">
           3.1 Pas marrjes së produktit të kthyer, Edi Store do të bëjë një inspektim për të verifikuar gjendjen e produktit dhe për të siguruar që plotëson kushtet e kthimit.
        
-          3.2 Nëse produkti kalon inspektimin, klientit do t'i kthehet vlera e produktit në formë të rimbursimit ose shkëmbimit me një produkt tjetër.
+          3.2 Nëse produkti kalon inspektimin, klientit do ti kthehet vlera e produktit në formë të rimbursimit ose shkëmbimit me një produkt tjetër.
         </p>
       </div>
 

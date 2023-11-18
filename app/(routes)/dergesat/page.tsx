@@ -11,7 +11,7 @@ const Dergesat = async () => {
           1.1 Ky dokument përcakton rregullat dhe procedurat për dërgesat brenda
           organizatës ose nëpërmjet organizatës dhe palëve të treta.
         
-          1.2 Termi "dërgesa" në këtë rregullore përfshin çdo lloj shkëmbimi
+          1.2 Termi dërgesanë këtë rregullore përfshin çdo lloj shkëmbimi
           shkrimor, dixhital ose fizik i cili transportohet nga një person,
           departament, apo filial tek një person, departament, apo filial tjetër
           brenda ose jashtë organizatës.

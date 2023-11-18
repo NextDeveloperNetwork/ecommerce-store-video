@@ -10,7 +10,7 @@ const EdiStoreTerms = async () => {
         <p className="mb-4">
           1.1 Ky dokument përcakton rregullat dhe kushtet e përdorimit të faqes së internetit Edi Store.
         
-          1.2 Termi "Faqe e Internetit" në këtë rregullore përfshin të gjitha faqet dhe shërbimet që ofrohen nga Edi Store.
+          1.2 Termi Faqe e Internetit në këtë rregullore përfshin të gjitha faqet dhe shërbimet që ofrohen nga Edi Store.
         </p>
       </div>
 
@@ -64,7 +64,7 @@ const EdiStoreTerms = async () => {
       </div>
 
       <p className="italic">
-        Kjo rregullore ka hyrë në fuqi nga data [shënoni datën] dhe do të zbatohet për përdorimin e faqes së internetit Edi Store.
+        Kjo rregullore ka hyrë në fuqi nga data 18/11/23 dhe do të zbatohet për përdorimin e faqes së internetit Edi Store.
       </p>
     </div>
   );
