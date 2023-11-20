@@ -10,6 +10,7 @@ import IconButton  from "@/components/ui/icon-button";
 import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
+import StarList from "./starlist";
 
 
 interface ProductCard {
@@ -48,9 +49,9 @@ const ProductCard: React.FC<ProductCard> = ({
       : data.description;
   
   return ( 
-    <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
+    <div onClick={handleClick} className=" bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
       {/* Image & actions */}
-      <div className="aspect-square rounded-xl bg-gray-100 relative">
+      <div className="aspect-square rounded-xl bg-gray-200 relative">
         <Image 
           src={data.images?.[0]?.url} 
           alt="" 
@@ -73,6 +74,7 @@ const ProductCard: React.FC<ProductCard> = ({
         <p className="text-sm text-gray-500">{truncatedDescription}</p>
      
       </div>
+     
       {/* Price & Reiew */}
       <div className="flex items-center justify-between">
         <Currency value={data?.price} />

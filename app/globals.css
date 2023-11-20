@@ -7,3 +7,11 @@ body,
 :root{
   height: 100%;
 }
+
+.star-gold {
+  fill: gold;
+}
+
+.star-gray {
+  fill: #DDDDDD;
+}

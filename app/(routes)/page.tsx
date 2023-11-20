@@ -3,8 +3,8 @@ import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
-
 import Link from "next/link";
+
 
 
 
@@ -18,8 +18,8 @@ const HomePage = async () => {
   return (
     <Container>
       <div className="space-y-1 pb-1">
-        
-        <Billboard 
+     
+      <Billboard 
           data={billboard}
         />
         
@@ -29,7 +29,7 @@ const HomePage = async () => {
     className="block max-w-xlg p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
     style={{ backgroundImage: 'url("/images/action/A11.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
   >
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sellout - Nderrim Stoku</h5>
+    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sellout -  Nen Kosto</h5>
   </Link>
 
   <Link
@@ -40,11 +40,12 @@ const HomePage = async () => {
     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Produktet ne Oferte</h5>
   </Link>
 </div>
+</div>
 
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
           <ProductList title="Produkte" items={products} />
         </div>
-      </div>
+     
     </Container>
   )
   
