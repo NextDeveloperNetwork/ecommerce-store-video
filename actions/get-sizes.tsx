@@ -1,11 +1,21 @@
 import { Size } from "@/types";
+import qs from "query-string";
 
-const URL=`${process.env.NEXT_PUBLIC_API_URL}/sizes`;
+const URL = `${process.env.NEXT_PUBLIC_API_URL}/sizes`;
 
-const getSizes = async (): Promise<Size[]> => {
-  const res = await fetch(URL);
+interface Query {
+    subcategoryId?: string;
+}
+const getSizes = async (query: Query): Promise<Size[]> => {
+    const url = qs.stringifyUrl({
+        url: URL,
+        query: {
+            subcategoryId: query.subcategoryId,
+        },
+    });
+    const res = await fetch(url);
 
-  return res.json();
+    return res.json();
 };
 
 export default getSizes;

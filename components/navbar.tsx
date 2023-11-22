@@ -24,7 +24,7 @@ const Navbar = async () => {
       <Link href="/" className="flex items-center gap-x-2">
         <img src="images/favicon.png" alt="Market Logo" className="h-16 w-16" />
       </Link>
-      <div className="hidden md:flex">
+      <div className="hidden sm:hidden md:hidden lg:flex">
         {/* Hide on screens smaller than md (medium) */}
         <MainNav data={categories} />
       </div>

@@ -18,6 +18,7 @@ export const revalidate = 0;
 interface CategoryPageProps {
   params: {
     subcategoryId: string;
+    categoryId: string;
   },
   searchParams: {
     colorId: string;
@@ -34,14 +35,16 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     colorId: searchParams.colorId,
     sizeId: searchParams.sizeId,
   });
-  const sizes = await getSizes();
-  const colors = await getColors();
+  const sizes = await getSizes({subcategoryId: params.subcategoryId} );
+  const colors = await getColors({subcategoryId: params.subcategoryId} );
   const subcategory = await getSubategory(params.subcategoryId);
   
   return (
     <div className="bg-white">
       <Container>
+      <div className="flex items-center gap-x-3 px-5 py-2">
         <Back/>
+        </div>
         <Billboard 
           data={subcategory.billboard}
         />
