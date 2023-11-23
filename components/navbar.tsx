@@ -33,10 +33,13 @@ const Navbar = async () => {
       </Link>
       <div className="hidden md:flex">
         {/* Hide on screens smaller than md (medium) */}
-        <MainNav data={categories} />
+        
       </div>
       <div className="flex-grow"></div>
+      <div className="hidden md:flex" >
       <NavbarSearch />
+      </div>
+      
       <NavbarActions />
       <div>
       <div className="ml-auto flex items-center gap-x-4">
@@ -47,7 +50,7 @@ const Navbar = async () => {
   
            style={{ display: 'flex', alignItems: 'center', height: '40px' }}
            >
-          <PiUserThin style={{ marginRight: '5px' }} /> Log-in
+          <PiUserThin style={{ marginRight: '5px' }} /> LogIn
           </Button>
        </Link>
        

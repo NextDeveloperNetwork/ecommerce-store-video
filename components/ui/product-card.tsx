@@ -73,10 +73,12 @@ const ProductCard: React.FC<ProductCard> = ({
         <p className="font-semibold text-lg">{data.name}</p>
         <p className="text-sm text-gray-500">{truncatedDescription}</p>
      
+        
       </div>
      
       {/* Price & Reiew */}
       <div className="flex items-center justify-between">
+        
         <Currency value={data?.price} />
         <IconButton
               onClick={onAddToCart} 

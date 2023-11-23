@@ -15,7 +15,7 @@ const MainNav: React.FC<MainNavProps> = ({
 }) => {
   const pathname = usePathname();
 
-  const routes = data.map((route) => ({
+  const limitedRoutes = data.slice(0, 5).map((route) => ({
     href: `/category/${route.id}`,
     label: route.name,
     active: pathname === `/category/${route.id}`,
@@ -25,7 +25,7 @@ const MainNav: React.FC<MainNavProps> = ({
     <nav
       className="mx-6 flex items-center space-x-4 lg:space-x-6"
     >
-      {routes.map((route) => (
+      {limitedRoutes.map((route) => (
         <Link
           key={route.href}
           href={route.href}

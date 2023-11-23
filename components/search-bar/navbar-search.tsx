@@ -34,7 +34,7 @@ const NavbarSearch = () => {
           <input
             type="search"
             id="default-search"
-            className="w-48 p-2 pl-14 text-base text-gray-600 border bg-gray-100 rounded-full focus:ring-1 focus:ring-gray-200 focus:border-gray-400 outline-none"
+            className="w-full  sm:w-72 p-2 pl-14 text-base text-gray-600 border bg-gray-100 rounded-full focus:ring-1 focus:ring-gray-200 focus:border-gray-400 outline-none"
             placeholder="Search..."
             {...form.register('search')}
           />
