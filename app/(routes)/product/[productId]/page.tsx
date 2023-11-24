@@ -22,7 +22,7 @@ const ProductPage: React.FC<ProductPageProps> = async({
     })
 
             return(
-        <div className="bg-white">
+        <div className="bg-gray-100">
            <Container>
             <Back/>
                 <div className=" px-10 py-10 sm:px-6 lg:px-8">

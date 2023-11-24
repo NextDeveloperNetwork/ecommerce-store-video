@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 html,
-body,
+body{
+  @apply bg-gray-100; 
+}
 :root{
   height: 100%;
+  
 }
 
 .star-gold {

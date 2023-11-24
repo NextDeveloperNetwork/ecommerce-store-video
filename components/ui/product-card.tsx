@@ -62,7 +62,7 @@ const ProductCard: React.FC<ProductCard> = ({
           <div className="flex gap-x-6 justify-center ">
             <IconButton 
               onClick={onPreview} 
-              icon={<Expand size={20} className="text-gray-600" />}
+              icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
             />
             
           </div>
@@ -78,11 +78,14 @@ const ProductCard: React.FC<ProductCard> = ({
      
       {/* Price & Reiew */}
       <div className="flex items-center justify-between">
-        
+      <div className="text-red-600">
         <Currency value={data?.price} />
+      </div>
+       
         <IconButton
               onClick={onAddToCart} 
-              icon={<ShoppingCart size={20} className="text-gray-600" />} 
+              icon={<ShoppingCart size={20} 
+              className="text-gray-600 hover:text-white" />} 
             />
       </div>
     </div>

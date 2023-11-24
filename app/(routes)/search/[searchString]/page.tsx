@@ -41,7 +41,7 @@ const FilterPage = async ({
     });
 
     return ( 
-        <div className="bg-white">
+        <div className="bg-gray-100">
             <Container>
            
             <div className="flex items-center gap-x-3 px-5 py-2">

@@ -42,7 +42,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const category = await getCategory(params.categoryId);
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100">
       <Container>
       
       <div className="flex items-center gap-x-3 px-5 py-2">

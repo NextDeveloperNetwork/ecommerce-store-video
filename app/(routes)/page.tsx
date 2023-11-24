@@ -30,18 +30,18 @@ const HomePage = async () => {
         <div className="px-6 grid grid-cols-2 gap-8">
   <Link
     href="/sellout"
-    className="block max-w-xlg p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
+    className="block max-w-xlg p-6 border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
     style={{ backgroundImage: 'url("/images/action/A11.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
   >
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sellout -  Nen Kosto</h5>
+    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Okazion Nen Kosto</h5>
   </Link>
 
   <Link
     href="/oferta"
-    className="block max-w-xlg p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
+    className="block max-w-xlg p-6 border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
     style={{ backgroundImage: 'url("/images/action/A12.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
   >
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Produktet ne Oferte</h5>
+    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Oferta Combo</h5>
   </Link>
 </div>
 </div>

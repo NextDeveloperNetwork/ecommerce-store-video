@@ -32,7 +32,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
     <Button className="flex items-center rounded-full bg-white px-0 py-2"onClick={onOpen} >
     {<MenuIcon  
     size={30}
-    color="gray" />} 
+    color="black" />} 
     </Button>
     
     <Dialog open={open} as="div" className="relative z-40" onClose={onClose}>
