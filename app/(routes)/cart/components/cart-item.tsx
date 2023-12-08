@@ -61,14 +61,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <h2 className="text-sm font-medium text-foreground mr-2">Quantity</h2>
         <div className="flex">
           
-          <Input
-            className="w-16 h-10 text-center bg-gray-100"
-            defaultValue={1}
-            min={1}
-            max={1000}
-            type="number"
-            
-          />
+        
           
         </div>
       </div>
