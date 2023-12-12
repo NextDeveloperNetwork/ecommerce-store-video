@@ -33,7 +33,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     messageW.addItemToWapp(data);
   };
   return (
-    <div>
+    <div className="bg-white shadow-md p-8 py-2">
       <h1 className="text-3xl font-bold text-gray-900">{data?.name}</h1>
       <div className="mt-3 flex items-end justify-between">
         <p className="text-2xl text-gray-900">
@@ -55,34 +55,31 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         </div>
   
         <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Description:</h3>
+          <h3 className="font-semibold text-black">Pershkrimi:</h3>
           <div >{data?.description}</div>
         </div>
 
       </div>
       
-  <div className="mt-10 flex items-center gap-x-3">
-  <Button onClick={onAddToCart} className="flex items-center gap-x-2">
-          Add To Cart
-          <ShoppingCart size={20} />
-        </Button>
+      <div className="mt-10 flex items-center gap-x-3 py-4">
+  <Button onClick={onAddToCart} className="flex items-center gap-x-2  text-white hover:bg-gray-800 px-4 py-2 rounded-md transition">
+    Add To Cart
+    <ShoppingCart size={20} className="text-white" />
+  </Button>
   </div>
-              <div className="mt-10 flex items-center gap-x-3">
-              <Button onClick={onOpenMessnger} className="flex items-center gap-x-2"> 
-                        Porosit ne Messenger
-                        <BiLogoMessenger size={35} 
-                          className="text-blue-500" />
-                          </Button>
-              </div>
+  <div className="flex items-center gap-x-3">
+    <Button onClick={onOpenMessnger} className="flex items-center gap-x-2 bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded-md transition">
+      Porosit ne Messenger
+      <BiLogoMessenger size={25} className="text-white" />
+    </Button>
 
-      <div className="mt-10 flex items-center gap-x-3">
-            <Button onClick={onOpenWhatsapp} className="flex items-center gap-x-2"> 
-          Porosit ne Wahtsapp
-          <BiLogoWhatsapp size={35} 
-            className="text-green-500" />
-            </Button>
-      </div>
-    </div>
+    <Button onClick={onOpenWhatsapp} className="flex items-center gap-x-2 bg-green-500 text-white hover:bg-green-600 px-4 py-2 rounded-md transition">
+      Porosit ne Whatsapp
+      <BiLogoWhatsapp size={25} className="text-white" />
+    </Button>
+  </div>
+</div>
+
   );
 };
  

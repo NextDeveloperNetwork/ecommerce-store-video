@@ -14,24 +14,24 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({
   images = []
 }) => {
-  return ( 
-    <Tab.Group as="div" className="flex flex-col-reverse">
-      <div className="mx-auto mt-6  w-full max-w-2xl sm:block lg:max-w-none">
-        <Tab.List className="grid grid-cols-5 gap-6">
+  return (
+    <Tab.Group as="div" className="flex flex-col-reverse ">
+      <div className="mx-auto mt-6 w-full max-w-2xl sm:block lg:max-w-none">
+        <Tab.List className="grid grid-cols-5 gap-4">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}
         </Tab.List>
       </div>
-      <Tab.Panels className=" aspect-square w-full">
+      <Tab.Panels className="aspect-square w-full mt-4">
         {images.map((image) => (
           <Tab.Panel key={image.id}>
-            <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
+            <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden transition-transform transform hover:scale-105">
               <NextImage
                 fill
                 src={image.url}
                 alt="Image"
-                className="object-cover object-center"
+                className="object-cover object-center rounded-md shadow-md"
               />
             </div>
           </Tab.Panel>
@@ -39,6 +39,7 @@ const Gallery: React.FC<GalleryProps> = ({
       </Tab.Panels>
     </Tab.Group>
   );
+  
 }
  
 export default Gallery;

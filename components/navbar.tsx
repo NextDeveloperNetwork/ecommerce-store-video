@@ -27,7 +27,7 @@ const Navbar = async () => {
       <Image
         src="/images/favicon.png"
         alt="Market Logo"
-        width={80}
+        width={120}
         height={80}
       />
       </Link>

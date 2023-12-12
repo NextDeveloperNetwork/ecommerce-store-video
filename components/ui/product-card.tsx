@@ -40,7 +40,13 @@ const ProductCard: React.FC<ProductCard> = ({
 
     cart.addItem(data);
   };
-  
+  const mCharacters = 50; // Set the maximum number of characters
+
+  const truncatedName =
+    data.name && data.description.length > mCharacters
+      ? `${data.name.substring(0, mCharacters)}...`
+      : data.name;
+
   const maxCharacters = 25; // Set the maximum number of characters
 
   const truncatedDescription =
@@ -49,47 +55,41 @@ const ProductCard: React.FC<ProductCard> = ({
       : data.description;
   
   return ( 
-    <div onClick={handleClick} className=" bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
-      {/* Image & actions */}
-      <div className="aspect-square rounded-xl bg-gray-200 relative">
-        <Image 
-          src={data.images?.[0]?.url} 
-          alt="" 
-          fill
-          className="aspect-square object-cover rounded-md"
-        />
-        <div className="opacity-20 group-hover:opacity-80 transition flex w-full px-1 py-1  bottom-5">
-          <div className="flex gap-x-6 justify-center ">
-            <IconButton 
-              onClick={onPreview} 
-              icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
-            />
-            
-          </div>
+    <div onClick={handleClick} className="bg-gradient-to-r from-white to-gray-200 group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105">
+    {/* Image & actions */}
+    <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 relative">
+      <Image 
+        src={data.images?.[0]?.url} 
+        alt="" 
+        fill
+        className="aspect-square object-cover rounded-md"
+      />
+      <div className="opacity-20 group-hover:opacity-80 transition flex w-full px-1 py-1 bottom-5">
+        <div className="flex gap-x-6 justify-center ">
+          <IconButton 
+            onClick={onPreview} 
+            icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
+          />
         </div>
       </div>
-      {/* Description */}
-      <div>
-        <p className="font-semibold text-lg">{data?.name}</p>
-        <p className="text-sm text-gray-500">{truncatedDescription}</p>
-     
-        
-      </div>
-     
-      {/* Price & Reiew */}
-      <div className="flex items-center justify-between">
+    </div>
+    {/* Description */}
+    <div className="text-center">
+      <p className="font-semibold text-lg text-gray-800 dark:text-white">{truncatedName}</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">{truncatedDescription}</p>
+    </div>
+    {/* Price & Review */}
+    <div className="flex items-center justify-between">
       <div className="text-red-600">
         <Currency value={data?.price} />
       </div>
-       
-        <IconButton
-              onClick={onAddToCart} 
-              icon={<ShoppingCart size={20} 
-              className="text-gray-600 hover:text-white" />} 
-            />
-      </div>
+      <IconButton
+        onClick={onAddToCart} 
+        icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />} 
+      />
     </div>
-  );
+  </div>
+  )
 }
 
 export default ProductCard;

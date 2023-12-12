@@ -30,13 +30,13 @@ const HomePage = async () => {
       <div className="md:hidden lg:hidden flex justify-center py-2">
         <NavbarSearch />
       </div>
-      <div className="space-y-1 pb-1">
+      <div className="space-y-1 pb-1 ">
         <Billboard data={billboard} />
 
-        <div className="px-6 grid grid-cols-2 gap-8">
+        <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
           <Link
             href="/sellout"
-            className="block max-w-xlg p-6 border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
+            className="block p-4 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
             style={{
               backgroundImage: 'url("/images/action/A11.jpg")',
               backgroundSize: "cover",
@@ -50,7 +50,7 @@ const HomePage = async () => {
 
           <Link
             href="/oferta"
-            className="block max-w-xlg p-6 border border-gray-100 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700"
+            className="block p-4 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
             style={{
               backgroundImage: 'url("/images/action/A12.jpg")',
               backgroundSize: "cover",
@@ -64,7 +64,7 @@ const HomePage = async () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 ">
         <ProductList title="Produkte" items={products} />
       </div>
     </Container>

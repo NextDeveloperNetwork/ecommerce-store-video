@@ -31,24 +31,28 @@ const ProductPage: React.FC<ProductPageProps> = async({
         <div className="bg-gray-100">
            <Container>
             <Back/>
+            <div >
                 <div className=" px-10 py-10 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
                         <div className="py-2 ">
                             <Gallery images={product?.images}/>
                         </div>
-                        <div className="mt-5 px-4 py-1 sm:mt-16 ms:px-0 lg:mt-0">
+                        <div className="mt-5 px-4 py-1 sm:mt-16 ms:px-0 lg:mt-0 ">
                           <Info data={product}/>
                         </div>
-                        
+                        </div>
                     </div>
-                    <Comment userId={userId} />
+                   
+                </div>
+                <div className="bg-white shadow-md p-8 py-2">
+                <Comment userId={userId} />
                         <CommentList
                           title="Komente"
                           items={comments}
                         />
+                        </div>
                     <hr className="mt-10"/>
                     <ProductList title="Related Items" items={suggestedProducts}/>
-                </div>
            </Container>
         </div>
     );
