@@ -29,7 +29,12 @@ const UserMenu = () => {
          
           <ul className="list-none p-2">
          
-      
+          <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
+            <Link href="/orders" onClick={closeMenu}>
+            <CiViewList  /><span style={{ marginRight: '5px' }}>Orders</span>
+            </Link>
+            </li>
+
 
 
             <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">

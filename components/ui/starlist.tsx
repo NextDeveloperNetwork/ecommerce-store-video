@@ -28,7 +28,7 @@ const StarList = ({
     return (
         <div className="flex items-center justify-start gap-x-2 mt-2">
             {renderStars()}
-            <span className="text-xs">(300)</span>
+            
         </div>
     );
 
