@@ -31,7 +31,7 @@ const UserMenu = () => {
          
           <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
             <Link href="/orders" onClick={closeMenu}>
-            <CiViewList  /><span style={{ marginRight: '5px' }}>Orders</span>
+            <CiViewList  /><span style={{ marginRight: '5px' }}>Porosite</span>
             </Link>
             </li>
 
