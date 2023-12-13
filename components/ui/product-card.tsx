@@ -55,7 +55,8 @@ const ProductCard: React.FC<ProductCard> = ({
       : data.description;
   
   return ( 
-    <div onClick={handleClick} className="bg-gradient-to-r from-white to-gray-200 group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105">
+    <div onClick={handleClick} className="bg-cover bg-center bg-no-repeat group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105"
+    style={{ backgroundImage: 'url("images/background9.jpg")' }}>
     {/* Image & actions */}
     <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 relative">
       <Image 
@@ -75,12 +76,12 @@ const ProductCard: React.FC<ProductCard> = ({
     </div>
     {/* Description */}
     <div className="text-center">
-      <p className="font-semibold text-lg text-gray-800 dark:text-white">{truncatedName}</p>
-      <p className="text-sm text-gray-500 dark:text-gray-300">{truncatedDescription}</p>
+      <p className="font-semibold text-lg text-gray-800 ">{truncatedName}</p>
+      <p className="text-sm text-gray-500 ">{truncatedDescription}</p>
     </div>
     {/* Price & Review */}
     <div className="flex items-center justify-between">
-      <div className="text-red-600">
+      <div className="text-red-600 font-bold  py-4">
         <Currency value={data?.price} />
       </div>
       <IconButton
