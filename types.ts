@@ -62,4 +62,23 @@ export interface Comment {
   message: string;
 }
 
+export interface  Order {
+  id: string;
+  storeId: string;
 
+  isPaid: boolean;
+  phone: string;
+  address: string;
+  userId: string;
+
+  items: OrderItem[];
+}
+
+// Intermediary for a many-to-many relationship
+export interface OrderItem {
+  id: string;
+  orderId: string;
+
+  productId: string;
+
+}
