@@ -9,13 +9,10 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
 
-const Summary = ({
-  userId
-}: { userId: string | null}) => {
+const Summary = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
-
 
   useEffect(() => {
     if (searchParams.get('success')) {
@@ -33,7 +30,7 @@ const Summary = ({
   }, 0);
 
   const onCheckout = async () => {
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout/${userId}`, {
+    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
       productIds: items.map((item) => item.id)
     });
 
@@ -61,4 +58,5 @@ const Summary = ({
 }
  
 export default Summary;
+
 

@@ -7,16 +7,12 @@ import useCart from '@/hooks/use-cart';
 
 import Summary from './components/summary'
 import CartItem from './components/cart-item';
-import { auth } from '@clerk/nextjs';
 
 export const revalidate = 0;
 
-const CartPage = ({
-  userId
-}: { userId : string | null }) => {
+const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
-
 
   useEffect(() => {
     setIsMounted(true);
@@ -40,9 +36,7 @@ const CartPage = ({
                 ))}
               </ul>
             </div>
-            <Summary
-              userId={userId}
-            />
+            <Summary />
           </div>
         </div>
       </Container>

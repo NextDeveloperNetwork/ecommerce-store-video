@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { toast } from "react-hot-toast";
 import { X } from "lucide-react";
@@ -45,7 +43,7 @@ const CartItem: React.FC<CartItemProps> = ({
     </div>
     <div className="ml-4 flex flex-1 flex-col justify-between">
       <div className="flex justify-between items-center mb-2">
-        <p className="text-lg font-semibold text-black">{data.name}</p>
+        <p className="text-lg font-semibold text-black">{data?.name}</p>
         <IconButton onClick={onRemove} icon={<X size={15} />} />
       </div>
       <div className="text-sm font-italic text-gray-500 mb-2">
@@ -63,7 +61,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <h2 className="text-sm font-medium text-foreground mr-2">Quantity</h2>
         <div className="flex">
           
-        
+         
           
         </div>
       </div>
