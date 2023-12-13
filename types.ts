@@ -78,7 +78,5 @@ export interface  Order {
 export interface OrderItem {
   id: string;
   orderId: string;
-
   productId: string;
-
 }
