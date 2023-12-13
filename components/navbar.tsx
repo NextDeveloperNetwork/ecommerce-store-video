@@ -42,7 +42,7 @@ const Navbar = async () => {
       
       <NavbarActions />
       <div>
-      <div className="ml-auto flex items-center gap-x-4">
+      <div className="ml-auto flex items-center justify-center gap-x-4">
         {!userId &&(
           <>
         <Link href='/sign-in' className="text-grey-300 hover:text-black mr-4 py-2">
