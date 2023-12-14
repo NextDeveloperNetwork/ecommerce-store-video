@@ -55,8 +55,8 @@ const ProductCard: React.FC<ProductCard> = ({
       : data.description;
   
   return ( 
-    <div onClick={handleClick} className="bg-cover bg-center bg-no-repeat group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105"
-    style={{ backgroundImage: 'url("images/background9.jpg")' }}>
+    <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105"
+    >
     {/* Image & actions */}
     <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 relative">
       <Image 
