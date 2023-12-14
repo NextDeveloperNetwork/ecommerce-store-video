@@ -27,35 +27,43 @@ const ProductPage: React.FC<ProductPageProps> = async({
     })
     const { userId } = await auth();
     const comments = await getComments(params.productId);
-            return(
-        <div className="bg-gray-100">
-           <Container>
-            <Back/>
-            <div >
-                <div className=" px-10 py-10 sm:px-6 lg:px-8">
-                    <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
-                        <div className="py-2 ">
-                            <Gallery images={product?.images}/>
-                        </div>
-                        <div className="mt-5 px-4 py-1 sm:mt-16 ms:px-0 lg:mt-0 ">
-                          <Info data={product}/>
-                        </div>
-                        </div>
+            return (
+              <div className="bg-gray-100">
+                <Container>
+                    <div className="px-4">
+                    <Back />
                     </div>
+                
+                  <div className=" bg-no-repeat px-4 py-6 sm:px-6 lg:px-8"
                    
-                </div>
-                <div className="bg-white shadow-md p-8 py-2">
-                <Comment userId={userId} />
-                        <CommentList
-                          title="Komente"
-                          items={comments}
-                        />
-                        </div>
-                    <hr className="mt-10"/>
-                    <ProductList title="Related Items" items={suggestedProducts}/>
-           </Container>
-        </div>
-    );
+                  >
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                      <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                        <Gallery images={product?.images} />
+                      </div>
+                      <div className="mt-8 sm:mt-0 lg:mt-0">
+                        <Info data={product} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                    <Comment userId={userId} />
+                    <hr className="my-6" />
+                    <CommentList title="Komente" items={comments} />
+                  </div>
+
+                  <hr className="my-6" />
+
+                  <div className="px-4 py-6 sm:px-6 lg:px-8">
+                    <ProductList
+                      title="Related Items"
+                      items={suggestedProducts}
+                    />
+                  </div>
+                </Container>
+              </div>
+            );
 }
 
 export default ProductPage;
