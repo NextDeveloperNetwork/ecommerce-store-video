@@ -9,21 +9,25 @@ import Currency  from "@/components/ui/currency";
 import IconButton  from "@/components/ui/icon-button";
 import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
-import { Product } from "@/types";
+import { Product, Comment} from "@/types";
 import StarList from "./starlist";
 
 
 interface ProductCard {
   data: Product
+
 }
 
 const ProductCard: React.FC<ProductCard> = ({
   data
 }) => {
+  
+  const getRandomNumber = () => Math.floor(Math.random() * 6);
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
 
+  
 
   const handleClick = () => {
     router.push(`/product/${data?.id}`);
@@ -89,6 +93,7 @@ const ProductCard: React.FC<ProductCard> = ({
         icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />} 
       />
     </div>
+    <StarList raiting={getRandomNumber()} />
   </div>
   )
 }

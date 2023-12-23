@@ -61,7 +61,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
             <div className="hidden lg:block">
               <Filter
                 valueKey="subcategoryId" 
-                name="Subcategory" 
+                name="Nenkategori" 
                 data={filteredSubcategories}
               />
               

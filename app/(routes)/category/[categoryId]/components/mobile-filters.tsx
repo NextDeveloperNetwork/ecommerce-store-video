@@ -46,10 +46,10 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
               <IconButton icon={<X size={15} />} onClick={onClose} />
             </div>
 
-            <div className="p-4">
+            <div className="p-4 items-center">
               <Filter
                 valueKey="subcategoryId" 
-                name="Subcategory" 
+                name="Nenkategori" 
                 data={subcategories}
               />
             </div>
