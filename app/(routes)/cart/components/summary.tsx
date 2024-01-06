@@ -25,9 +25,15 @@ const Summary = () => {
     }
   }, [searchParams, removeAll]);
 
+  const deliveryCost = 300; // Replace 300 with your actual delivery cost
   const totalPrice = items.reduce((total, item) => {
-    return total + Number(item.price)
+      return total + Number(item.price);
   }, 0);
+  
+  // If the total is greater than 4000, set the delivery cost to 0
+  const adjustedDeliveryCost = totalPrice > 3999 ? 0 : deliveryCost;
+  
+  const totalPriceWithDelivery = totalPrice + adjustedDeliveryCost;
 
   const onCheckout = async () => {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
@@ -42,13 +48,20 @@ const Summary = () => {
       className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
     >
       <h2 className="text-lg font-medium text-gray-900">
-        Order summary
+        Permbledhje
       </h2>
       <div className="mt-6 space-y-4">
-        <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-          <div className="text-base font-medium text-gray-900">Order total</div>
-         <Currency value={totalPrice} />
+      <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+      <div className="text-base font-medium text-gray-900">
+        {totalPrice > 3999 ? 'Posta Falas' : 'Posta'}
+      </div>
+      {totalPrice > 3999 ? 'ALL 0 +' : `ALL ${adjustedDeliveryCost} +`}
         </div>
+        <div className="flex items-center justify-between  pt-4">
+          <div className="text-base font-medium text-gray-900">Porosi total</div>
+         <Currency value={totalPriceWithDelivery } />
+        </div>
+        
       </div>
       <Button onClick={onCheckout} disabled={items.length === 0} className="w-full mt-6">
         Checkout
