@@ -5,7 +5,7 @@ import { PiUserThin } from "react-icons/pi";
 import { CiViewList } from "react-icons/ci";
 import Link from "next/link";
 import LogoutButton from './logout';
-
+import Username from '@/components/username'
 const UserMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -15,6 +15,7 @@ const UserMenu = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+ 
   return (
     <div >
      <Button 
@@ -27,8 +28,11 @@ const UserMenu = () => {
       {isMenuOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md">
          
+        
           <ul className="list-none p-2">
-         
+            <li>
+              <Username/>
+            </li>
           <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
             <Link href="/orders" onClick={closeMenu}>
             <CiViewList  /><span style={{ marginRight: '5px' }}>Porosite</span>

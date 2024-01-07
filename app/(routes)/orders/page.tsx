@@ -4,32 +4,32 @@ import React from "react";
 
 const Orders = async () => {
 
-  const { userId } = await auth();
+  // const { userId } = await auth();
 
-  if (!userId) {
-    return null;
-  }
+  // if (!userId) {
+  //   return null;
+  // }
 
-  console.log("ORDER USER ID: " + userId)
+  // console.log("ORDER USER ID: " + userId)
 
-  const orders = await getOrders(userId)
+  // const orders = await getOrders(userId)
 
-  const renderOrders = () => {
-    return orders.map((order) => {
-      return order.items.map((item) => {
-        return (
-          <tr key={order.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th
-              scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-              {item.productId}
-            </th>
-          </tr>
-        );
-      });
-    });
-  };
+  // const renderOrders = () => {
+  //   return orders.map((order) => {
+  //     return order.items.map((item) => {
+  //       return (
+  //         <tr key={order.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  //           <th
+  //             scope="row"
+  //             className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+  //           >
+  //             {item.productId}
+  //           </th>
+  //         </tr>
+  //       );
+  //     });
+  //   });
+  // };
 
   return (
     <div className="max-w-3xl mx-auto p-8 bg-white rounded-md shadow-lg ">
@@ -48,7 +48,7 @@ const Orders = async () => {
             </tr>
           </thead>
           <tbody>
-            {renderOrders()}
+            {/* {renderOrders()} */}
           </tbody>
         </table>
       </div>
