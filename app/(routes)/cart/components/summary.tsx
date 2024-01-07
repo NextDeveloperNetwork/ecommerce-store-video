@@ -31,7 +31,8 @@ const Summary = () => {
   }, 0);
   
   // If the total is greater than 4000, set the delivery cost to 0
-  const adjustedDeliveryCost = totalPrice > 3999 ? 0 : deliveryCost;
+  const adjustedDeliveryCost = totalPrice === 0 ? 0 : (totalPrice > 3999 ? 0 : deliveryCost);
+
   
   const totalPriceWithDelivery = totalPrice + adjustedDeliveryCost;
 
