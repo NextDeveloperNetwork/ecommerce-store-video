@@ -10,6 +10,8 @@ import IconButton  from "@/components/ui/icon-button";
 import useMessage from "@/components/ui/open-Messenger";
 import useMessageW from "@/components/ui/open-wapp";
 import { MouseEventHandler } from "react";
+import Image from "next/image";
+
 interface InfoProps {
   data: Product
 };
@@ -59,7 +61,33 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <h3 className="font-semibold text-black">Pershkrimi:</h3>
         <div>{data?.description}</div>
       </div>
-  
+      <hr className="my-4" />
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-700 italic">Posta:</h3>
+        <div className="text-sm italic text-gray-400">Nese shuma kalon 4000 Leke posta eshte falas, ne rast te kundert kushton 300Leke</div>
+      </div>
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-700 italic">Dergesa:</h3>
+        <div className="text-sm italic text-gray-400">Dergesa kryhet brenda 72-96 oreve! Brenda 3 diteve te punes , 
+          ose ne rast festash mund te vonohet pak me shume! </div>
+      </div>
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-700 italic">Kthime:</h3>
+        <div className="text-sm italic text-gray-400">Zevendesimi i produktit mund te behet brenda 5 diteve,sipas marrveshjes. 
+          Klienti eshte pergjegjes per kostot e kthimit dhe ridergeses!</div>
+      </div>
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-700 italic">Pagesa:</h3>
+        
+          <Image
+          alt="payments"
+          src="/images/pm.png"
+          height={20}
+          width={85}
+          /> 
+    
+      </div>
+
       <div className="mt-8 flex gap-3 flex-col sm:flex-row items-center justify-between">
       <button onClick={onAddToCart} className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0">
         <span className="flex items-center gap-2">

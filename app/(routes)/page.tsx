@@ -3,7 +3,7 @@ import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
-import NavbarSearch from "@/components/search-bar/navbar-search";
+
 import Link from "next/link";
 import { auth } from "@clerk/nextjs";
 
@@ -27,9 +27,7 @@ const HomePage = async () => {
 
   return (
     <Container>
-      <div className="md:hidden lg:hidden flex justify-center py-2">
-        <NavbarSearch />
-      </div>
+     
       <div className="space-y-1 pb-1 ">
         <Billboard data={billboard} />
 
