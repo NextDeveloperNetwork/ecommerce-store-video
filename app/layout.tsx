@@ -7,7 +7,7 @@ import Navbar from '@/components/navbar'
 import ModalProvider from '@/providers/modal-provider'
 import ToastProvider from '@/providers/toast-provider'
 import { ClerkProvider } from '@clerk/nextjs'
-import SubNavbar from '@/components/subnavbar'
+
 
 const font = Urbanist({ subsets: ['latin'] })
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       <ToastProvider />
       <ModalProvider />
       <Navbar />
-      <SubNavbar/>
+      
       {children}
       <Footer />
     </body>

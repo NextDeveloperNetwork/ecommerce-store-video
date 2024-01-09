@@ -3,7 +3,7 @@ import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
-
+import SubNavbar from '@/components/subnavbar'
 import Link from "next/link";
 import { auth } from "@clerk/nextjs";
 
@@ -27,7 +27,7 @@ const HomePage = async () => {
 
   return (
     <Container>
-     
+     <SubNavbar/>
       <div className="space-y-1 pb-1 ">
         <Billboard data={billboard} />
 
