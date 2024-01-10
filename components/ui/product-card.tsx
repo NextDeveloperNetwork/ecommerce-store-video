@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCard> = ({
   
     return count > 0 ? sum / count : 0;
   };
-  
+  const averageRating = averageFunction(data.comments);
 
   const handleClick = () => {
     router.push(`/product/${data?.id}`);
@@ -104,7 +104,7 @@ const ProductCard: React.FC<ProductCard> = ({
         icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />} 
       />
     </div>
-    <StarList raiting={averageFunction(data.comments)} />
+    <StarList raiting={averageRating} />
   </div>
   )
 }
