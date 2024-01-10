@@ -44,7 +44,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     <div className="bg-gray-100">
       <Container>
       <SubNavbar/>
-      <NextBreadcrumb homeElement={undefined} separator={undefined}/>
+
       <div className="flex items-center gap-x-3 px-5 py-2">
         <Back/>
         </div>

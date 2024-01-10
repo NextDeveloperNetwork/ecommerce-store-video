@@ -9,6 +9,7 @@ import ToastProvider from '@/providers/toast-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 
 
+
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -28,7 +29,6 @@ export default function RootLayout({
       <ToastProvider />
       <ModalProvider />
       <Navbar />
-      
       {children}
       <Footer />
     </body>

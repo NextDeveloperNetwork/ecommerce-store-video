@@ -13,6 +13,7 @@ import NavbarSearch from "./search-bar/navbar-search";
 import Image from "next/image";
 import UserMenue from "./drop-user-menue";
 
+
 const Navbar = async () => {
   const {userId} =auth();
 
@@ -32,6 +33,7 @@ const Navbar = async () => {
         height={40}
       />
       </Link>
+      
       <div className="hidden md:flex">
         {/* Hide on screens smaller than md (medium) */}
         

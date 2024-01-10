@@ -25,20 +25,27 @@ const Summary = () => {
     }
   }, [searchParams, removeAll]);
 
-  const deliveryCost = 300; // Replace 300 with your actual delivery cost
+  const deliveryCost = 300; 
   const totalPrice = items.reduce((total, item) => {
       return total + Number(item.price);
   }, 0);
   
-  // If the total is greater than 4000, set the delivery cost to 0
+
   const adjustedDeliveryCost = totalPrice === 0 ? 0 : (totalPrice > 3999 ? 0 : deliveryCost);
 
   
   const totalPriceWithDelivery = totalPrice + adjustedDeliveryCost;
 
   const onCheckout = async () => {
+    // const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+    //   productIds: items.map((item) => item.id)
+    // });
+
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
+      products: items.map((item) => ({
+        id: item.id,
+        quantity: item.quantity,
+      }))
     });
 
     window.location = response.data.url;

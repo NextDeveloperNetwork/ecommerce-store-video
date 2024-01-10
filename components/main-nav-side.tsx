@@ -28,6 +28,7 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
     href: `/category/${route.id}`,
     label: route.name,
     active: pathname === `/category/${route.id}`,
+    subcategories: route.subcategories
   }));
 
   const handleCategoryClick = (index: number) => {
@@ -75,7 +76,13 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
             </div>
             {openCategory === index && (
               <ul className="pl-6">
-                 
+                  {route.subcategories.map((subcategory) => (
+                    <li key={subcategory.id}>
+                      <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        {subcategory.name}
+                      </a>
+                    </li>
+                  ))}
               </ul>
               
             )}

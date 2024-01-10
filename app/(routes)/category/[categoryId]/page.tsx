@@ -14,6 +14,7 @@ import SubNavbar from '@/components/subnavbar'
 
 
 
+
 export const revalidate = 0;
 
 interface CategoryPageProps {
