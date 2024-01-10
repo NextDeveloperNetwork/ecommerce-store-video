@@ -9,6 +9,7 @@ import getCategories from "@/actions/get-categories";
 
 
 
+
 const SubNavbar = async () => {
   const categories = await getCategories();
   return (

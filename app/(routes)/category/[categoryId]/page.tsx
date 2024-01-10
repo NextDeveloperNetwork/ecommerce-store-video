@@ -10,7 +10,7 @@ import getSubcategories from '@/actions/get-subcategories';
 import MobileFilters from '../../category/[categoryId]/components/mobile-filters';
 import MobileFiltersC from "@/components/category-filter-sub";
 import Back from '@/components/back';
-
+import SubNavbar from '@/components/subnavbar'
 
 
 
@@ -44,7 +44,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   return (
     <div className="bg-gray-100">
       <Container>
-      
+      <SubNavbar/>
       <div className="flex items-center gap-x-3 px-5 py-2">
       <Back/>
       <div className="flex-grow "></div>

@@ -19,7 +19,7 @@ const Navbar = async () => {
   const categories = await getCategories();
  
   return (
-<div className="border-b sticky top-0 bg-gradient-to-r from-white to-red-500 z-10">
+<div className="border-b sticky top-0 bg-gradient-to-r from-white to-red-100 z-10">
   <Container>
     <div className="mx-auto max-w-7xl relative flex h-12 items-center px-4 justify-between">
       <MobileFilters categories={categories} />
@@ -28,8 +28,8 @@ const Navbar = async () => {
      
         src="/images/favicon.png"
         alt="Market Logo"
-        width={120}
-        height={80}
+        width={70}
+        height={40}
       />
       </Link>
       <div className="hidden md:flex">

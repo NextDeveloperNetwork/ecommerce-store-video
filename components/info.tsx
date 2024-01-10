@@ -81,9 +81,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         
           <Image
           alt="payments"
-          src="/images/pm.png"
-          height={20}
-          width={85}
+          src="/images/pm1.png"
+          height={40}
+          width={100}
           /> 
     
       </div>

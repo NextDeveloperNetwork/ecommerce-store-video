@@ -3,7 +3,7 @@ import Container from '@/components/ui/container';
 import Billboard from '@/components/billboard';
 import ProductCard from '@/components/ui/product-card';
 import NoResults from '@/components/ui/no-results';
-
+import SubNavbar from '@/components/subnavbar'
 import getProducts from "@/actions/get-products";
 import getSubategory from '@/actions/get-subcategory';
 import getSizes from '@/actions/get-sizes';
@@ -12,6 +12,7 @@ import getColors from '@/actions/get-colors';
 import Filter from './components/sub-filter';
 import MobileFilters from './components/sub-mobile-filters';
 import Back from '@/components/back';
+import NextBreadcrumb from '@/components/nextbreadcrumbs';
 
 export const revalidate = 0;
 
@@ -42,6 +43,8 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   return (
     <div className="bg-gray-100">
       <Container>
+      <SubNavbar/>
+      <NextBreadcrumb homeElement={undefined} separator={undefined}/>
       <div className="flex items-center gap-x-3 px-5 py-2">
         <Back/>
         </div>

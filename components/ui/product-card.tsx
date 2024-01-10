@@ -27,6 +27,17 @@ const ProductCard: React.FC<ProductCard> = ({
   const cart = useCart();
   const router = useRouter();
 
+  const averageFunction = (comments: Comment[]) => {
+
+    if (!comments) {
+      return 0;
+    }
+
+    const sum = comments.reduce((acc, comment) => acc + comment.rate * 1, 0);
+    const count = comments.length;
+  
+    return count > 0 ? sum / count : 0;
+  };
   
 
   const handleClick = () => {
@@ -93,7 +104,7 @@ const ProductCard: React.FC<ProductCard> = ({
         icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />} 
       />
     </div>
-    <StarList raiting={getRandomNumber()} />
+    <StarList raiting={averageFunction(data.comments)} />
   </div>
   )
 }

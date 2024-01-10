@@ -19,6 +19,7 @@ const HomePage = async () => {
   console.log(userId);
   console.log(userId);
 
+
   if (!userId) {
     console.log("NOT LOGGED IN");
   } else {
@@ -30,7 +31,7 @@ const HomePage = async () => {
      <SubNavbar/>
       <div className="space-y-1 pb-1 ">
         <Billboard data={billboard} />
-
+      
         <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
           <Link
             href="/sellout"
