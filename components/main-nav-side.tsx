@@ -78,7 +78,8 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
               <ul className="pl-6">
                   {route.subcategories.map((subcategory) => (
                     <li key={subcategory.id}>
-                      <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-500 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md"
+>
                         {subcategory.name}
                       </a>
                     </li>

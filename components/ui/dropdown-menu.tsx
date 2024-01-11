@@ -20,51 +20,67 @@ const DropdownMenu = ({
   }
 
   return (
-    <div className="relative inline-block text-left" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      {/* Dropdown button */}
-      <button
-        id={`dropdownHoverButton-${route.id}`}
-        data-dropdown-toggle={`dropdownHover-${route.id}`}
-        data-dropdown-trigger="hover"
-        className="whitespace-nowrap text-gray-800 bg-transparent hover:bg-white/30 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center "
-        type="button"
-        onClick={() => onClick(route.href)}
-      >
-        {route.label}
-        <svg
-          className="w-2.5 h-2.5 ms-3"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 10 6"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 1 4 4 4-4"
-          />
-        </svg>
-      </button>
-
+    <div className="relative inline-block text-left " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+     {/* Dropdown button */}
+<button
+  id={`dropdownHoverButton-${route.id}`}
+  data-dropdown-toggle={`dropdownHover-${route.id}`}
+  data-dropdown-trigger="hover"
+  className="whitespace-nowrap text-gray-800 bg-transparent hover:bg-white/30 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-2 md:px-2 py-2 md:py-2.5 text-center inline-flex items-center transition duration-300 ease-in-out transform hover:scale-105 md:scale-100"
+  type="button"
+  onClick={() => onClick(route.href)}
+>
+  {route.label}
+  <svg
+    className="w-2.5 h-2.5 ms-2 md:ms-3"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 10 6"
+  >
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="m1 1 4 4 4-4"
+    />
+  </svg>
+</button>
+  
       {/* Dropdown menu */}
-      <div
-        id={`dropdownHover-${route.id}`}
-        className={`z-10 ${isHovered ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute`}
-      >
-        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby={`dropdownHoverButton-${route.id}`}>
-        {subcategories.map((subcategory) => (
-            <li key={subcategory.id}>
-              <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                {subcategory.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+<div
+  id={`dropdownHover-${route.id}`}
+  role="menu"
+  aria-labelledby={`dropdownHover-${route.id}`}
+  className={`z-10 ${isHovered ? 'block opacity-100 scale-100' : 'hidden opacity-0 scale-95'} bg-gradient-to-r from-white to-gray-200 divide-y divide-gray-200 rounded-lg shadow-lg w-full md:w-72 absolute overflow-hidden transform transition-all ease-in-out duration-300`}
+  style={{ transformOrigin: 'top' }}
+>
+  <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-1 p-2">
+    {subcategories.map((subcategory, index) => (
+      <div key={subcategory.id}>
+        <a
+          href={`/subcategory/${subcategory.id}`}
+          className="block w-full py-1 text-center text-black font-bold transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-500 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md mb-4"
+          style={{ transitionProperty: 'background, transform, box-shadow', transitionDuration: '0.3s' }}
+        >
+          {subcategory.name}
+        </a>
       </div>
+    ))}
+  </div>
+  <div className="p-4">
+    <button
+      onClick={() => setIsHovered(false)}
+      className="w-full text-gray-500 hover:text-gray-700 focus:outline-none transition duration-300 transform hover:scale-200"
+    >
+      Close
+    </button>
+  </div>
+</div>
     </div>
   );
+  
 };
 
 export default DropdownMenu;
