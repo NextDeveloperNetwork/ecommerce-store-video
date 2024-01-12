@@ -6,6 +6,7 @@ import Container from "@/components/ui/container";
 import SubNavbar from '@/components/subnavbar'
 import Link from "next/link";
 import { auth } from "@clerk/nextjs";
+import MyCarousel from "@/components/carosel";
 
 export const revalidate = 0;
 
