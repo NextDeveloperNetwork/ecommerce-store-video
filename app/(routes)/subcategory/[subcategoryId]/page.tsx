@@ -45,8 +45,10 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
       <Container>
       <SubNavbar/>
 
-      <div className="flex items-center gap-x-3 px-5 py-2">
-        <Back/>
+      <div className="flex items-center gap-x-3 px-5 py-1">
+        <Back />
+        <div className="flex-grow "></div>
+        <MobileFilters sizes={sizes} colors={colors} />
         </div>
         <Billboard 
           data={subcategory.billboard}
@@ -54,7 +56,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
           
-            <MobileFilters sizes={sizes} colors={colors} />
+            
             <div className="hidden lg:block">
               <Filter
                 valueKey="sizeId" 
