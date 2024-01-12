@@ -50,8 +50,12 @@ const ProductPage: React.FC<ProductPageProps> = async({
                   </div>
 
                   <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                  <div className="font-bold text-2xl px-2 py-2">
+                     <h1>Vleresimi i produktit /Rating</h1>
+                   </div>
                     <Comment userId={userId} />
                     <hr className="my-6" />
+                  
                     <CommentList title="Komente" items={comments} />
                   </div>
 
@@ -59,7 +63,7 @@ const ProductPage: React.FC<ProductPageProps> = async({
 
                   <div className="px-4 py-6 sm:px-6 lg:px-8">
                     <ProductList
-                      title="Related Items"
+                      title="Produkte te ngjashem"
                       items={suggestedProducts}
                     />
                   </div>

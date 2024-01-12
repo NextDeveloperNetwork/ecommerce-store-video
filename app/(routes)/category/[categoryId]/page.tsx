@@ -71,6 +71,9 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
               
             </div>
             <div className="mt-6 lg:col-span-4 lg:mt-0">
+              <div className="font-bold text-2xl px-2 py-2">
+                <h1>Produkte</h1>
+              </div>
               {products.length === 0 && <NoResults />}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {products.map((item) => (

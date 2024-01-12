@@ -22,7 +22,7 @@ const UserMenu = () => {
   onClick={toggleMenu}
   style={{ display: 'flex', alignItems: 'center', height: '40px' }}
 >
-  <PiUserThin style={{ marginRight: '5px' }} /> Account
+  <PiUserThin style={{ marginRight: '5px' }} /> Llogaria
 </Button>
 
       {isMenuOpen && (

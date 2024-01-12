@@ -59,25 +59,25 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
         <div className="text-sm font-italic text-gray-500 mb-2">
-          Quantity in stock: {data.quantity} pc
+          {/* Sasia ne gjendje: {data.quantity} n/a */}
         </div>
         <div className="flex items-center text-sm mb-2">
-          <p className="text-gray-500">Color: {data.color.name}</p>
-          <p className="ml-4 text-gray-500">Size: {data.size.name}</p>
+          <p className="text-gray-500">Ngjyra: {data.color.name}</p>
+          <p className="ml-4 text-gray-500">Permasa: {data.size.name}</p>
         </div>
         <div className="flex items-center text-lg font-semibold text-black">
-          <span className="mr-2">Price:</span>
+          <span className="mr-2">Cmimi:</span>
           <Currency value={data.price} />
         </div>
-        <div className="flex items-center mt-4">
-          <h2 className="text-sm font-medium text-foreground mr-2">Quantity</h2>
+        {/* <div className="flex items-center mt-4">
+          <h2 className="text-sm font-medium text-foreground mr-2">Sasia</h2>
           <div className="flex">
             <form className="max-w-xs mx-auto">
               <label
                 htmlFor="quantity-input"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Choose quantity:
+                Zgjidh Sasine:
               </label>
               <div className="relative flex items-center max-w-[8rem]">
                 <button
@@ -145,7 +145,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
               </p>
             </form>
           </div>
-        </div>
+        </div> */}
       </div>
     </li>
   );
