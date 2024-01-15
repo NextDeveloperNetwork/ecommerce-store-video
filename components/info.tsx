@@ -55,12 +55,18 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           <h3 className="font-semibold text-black">Ngjyra:</h3>
           <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.color?.value }} />
         </div>
+        <div className="flex items-center gap-2">
+        <h3 className="font-semibold text-black">Sasia ne gjendje:</h3>
+          <div>{data?.quantity}</div>
+        </div>
       </div>
   
       <div className="mt-6">
         <h3 className="font-semibold text-black">Pershkrimi:</h3>
         <div>{data?.description}</div>
+        
       </div>
+      
       <hr className="my-4" />
       <div className="mt-6">
         <h3 className="font-semibold text-gray-700 italic">Posta:</h3>
@@ -81,9 +87,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         
           <Image
           alt="payments"
-          src="/images/pm1.png"
-          height={40}
-          width={100}
+          src="/images/pm2.png"
+          height={120}
+          width={200}
           /> 
     
       </div>

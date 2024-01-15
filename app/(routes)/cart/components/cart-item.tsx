@@ -58,8 +58,11 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           <p className="text-lg font-semibold text-black">{data?.name}</p>
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
+        <div className="text-sm font-italic text-gray-800 mb-2 px-9">
+           "{data.description} "
+        </div>
         <div className="text-sm font-italic text-gray-500 mb-2">
-          {/* Sasia ne gjendje: {data.quantity} n/a */}
+          Sasia ne gjendje: {data.quantity} 
         </div>
         <div className="flex items-center text-sm mb-2">
           <p className="text-gray-500">Ngjyra: {data.color.name}</p>
