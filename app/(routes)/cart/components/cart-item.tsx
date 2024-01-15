@@ -59,7 +59,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
         <div className="text-sm font-italic text-gray-800 mb-2 px-9">
-           "{data.description} "
+           {data.description} 
         </div>
         <div className="text-sm font-italic text-gray-500 mb-2">
           Sasia ne gjendje: {data.quantity} 
