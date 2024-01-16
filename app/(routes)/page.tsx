@@ -7,6 +7,7 @@ import SubNavbar from '@/components/subnavbar'
 import Link from "next/link";
 import { auth } from "@clerk/nextjs";
 import MyCarousel from "@/components/carosel";
+import SliderPage from "@/components/ui/slider";
 
 export const revalidate = 0;
 
@@ -31,6 +32,9 @@ const HomePage = async () => {
     <Container>
      <SubNavbar/>
       <div className="space-y-1 pb-1 ">
+      <div className="border-b bg-gradient-to-r from-blue-50 to-white top-0 z-10">
+        <SliderPage/>
+        </div>
         <Billboard data={billboard} />
       
         <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
