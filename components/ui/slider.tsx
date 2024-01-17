@@ -5,7 +5,7 @@ import Image from "next/image";
 import 'keen-slider/keen-slider.min.css'
 // Define constants
 const imageWidth = 100;
-const imageHeight = 50;
+const imageHeight = 40;
 const marginBetweenSlides = 10; // Set your preferred margin value
 const animation = { duration: 5000, easing: (t: any) => t };
 
@@ -72,8 +72,8 @@ const SliderPage = () => {
                 src={image.src}
                 alt={`Slide ${index + 1}`}
                 style={{ width: `${imageWidth}px`, height: `${imageHeight}px` }}
-                width={100}
-                height={50}
+                width={75}
+                height={20}
               />
             </div>
           </a>

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { auth } from "@clerk/nextjs";
 import MyCarousel from "@/components/carosel";
 import SliderPage from "@/components/ui/slider";
+import BrandSelect from "@/components/ui/brand-slider";
 
 export const revalidate = 0;
 
@@ -32,12 +33,12 @@ const HomePage = async () => {
     <Container>
      <SubNavbar/>
       <div className="space-y-1 pb-1 ">
-      <div className="border-b bg-gradient-to-r from-blue-50 to-white top-0 z-10">
-        <SliderPage/>
-        </div>
-        <Billboard data={billboard} />
       
-        <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
+        <Billboard data={billboard} />
+        <div className="py-2">
+      <BrandSelect/>
+      </div>
+        {/* <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
           <Link
             href="/sellout"
             className="block p-4 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
@@ -65,7 +66,7 @@ const HomePage = async () => {
               Oferta Combo
             </h5>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 ">
