@@ -67,7 +67,7 @@ const BrandSelect = () => {
               height={50}
               layout="responsive"
               objectFit="cover"
-              className="border p-2 bg-gradient-to-r from-blue-100 to-white rounded-md hover:scale-95 transform transition-transform duration-300 mx-auto"
+              className="border p-2 bg-white rounded-md hover:scale-95 transform transition-transform duration-300 mx-auto"
           />
         </Link>
       ))}

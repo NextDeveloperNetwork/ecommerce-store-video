@@ -33,9 +33,7 @@ const HomePage = async () => {
       <SubNavbar />
       <div className="space-y-1 pb-1 ">
         <Billboard data={billboard} />
-        <div className="py-2">
-          <BrandSelect />
-        </div>
+        
         <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
           <Link
             href="/sellout"
@@ -66,7 +64,9 @@ const HomePage = async () => {
           </Link>
         </div>
       </div>
-
+      <div className="py-2">
+          <BrandSelect />
+        </div>
       <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 ">
         <ProductList title="Produkte" items={products} />
       </div>

@@ -20,7 +20,7 @@ interface Subcategory {
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
-  const limitedRoutes = data.slice(0, 12).map((route) => ({
+  const limitedRoutes = data.slice(0, 10).map((route) => ({
     id: route.id,
     href: `/category/${route.id}`,
     label: route.name,

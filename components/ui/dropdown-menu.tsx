@@ -28,7 +28,7 @@ const DropdownMenu = ({
   id={`dropdownHoverButton-${route.id}`}
   data-dropdown-toggle={`dropdownHover-${route.id}`}
   data-dropdown-trigger="hover"
-  className="whitespace-nowrap text-black bg-transparent hover:bg-white/30 focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-2 md:px-2 py-2 md:py-2.5 text-center inline-flex items-center transition duration-300 ease-in-out transform hover:scale-105 md:scale-100"
+  className="whitespace-nowrap text-white font-semibold bg-transparent hover:bg-white/30 focus:ring-4 focus:outline-none focus:ring-blue-100  rounded-lg text-sm px-2 md:px-2 py-2 md:py-2.5 text-center inline-flex items-center transition duration-300 ease-in-out transform hover:scale-105 md:scale-100"
   type="button"
   onClick={() => onClick(route.href)}
 >
