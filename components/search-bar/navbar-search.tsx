@@ -40,10 +40,10 @@ const NavbarSearch = () => {
           />
           <button
             type="submit"
-            className="absolute left-4  p-1.5 bg-grey-300 hover:bg-blue-200 focus:outline-none rounded-full border "
+            className="absolute left-4  p-1.5 bg-black hover:bg-white focus:outline-none rounded-full border "
           >
             <svg
-              className="w-5 h-5 text-black"
+              className="w-5 h-5 text-white hover:text-black"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

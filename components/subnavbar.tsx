@@ -7,13 +7,13 @@ const SubNavbar = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="border-b bg-gradient-to-r from-blue-400 to-zinc-500 top-0 z-10">
+    <div className="border-b bg-black top-0 z-10">
       <Container>
         <div className="mx-auto max-w-7xl flex h-12 items-center px-4 justify-between relative">
           <div className="hidden sm:block ">
             <MainNav data={categories} />
           </div>
-          <div className="md:hidden lg:hidden flex justify-center py-2">
+          <div className="md:hidden lg:hidden flex-grow py-2 ">
             <NavbarSearch />
           </div>
         </div>
