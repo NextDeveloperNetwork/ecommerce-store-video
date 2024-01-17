@@ -61,14 +61,14 @@ const BrandSelect = () => {
       {images.map((image, index) => (
         <Link key={index} href={image.link} target="_blank" rel="noopener noreferrer" className="keen-slider__slide">
           <Image
-    src={image.src}
-    alt={image.alt}
-    width={100}
-    height={50}
-    layout="responsive"
-  objectFit="cover"
-  className="border p-2 bg-gradient-to-r from-blue-100 to-white rounded-md hover:scale-95 transform transition-transform duration-300 mx-auto"
-  />
+              src={image.src}
+              alt={image.alt}
+              width={100}
+              height={50}
+              layout="responsive"
+              objectFit="cover"
+              className="border p-2 bg-gradient-to-r from-blue-100 to-white rounded-md hover:scale-95 transform transition-transform duration-300 mx-auto"
+          />
         </Link>
       ))}
     </div>

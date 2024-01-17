@@ -37,9 +37,16 @@ const Summary = () => {
   const totalPriceWithDelivery = totalPrice + adjustedDeliveryCost;
 
   const onCheckout = async () => {
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
-     });
+    // const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+    //   productIds: items.map((item) => item.id)
+    // });
+
+      const products = items.map((item) => ({
+        id: item.id,
+        quantity: item.quantity,
+      }))
+
+      console.log(products)
 
     // const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
     //   products: items.map((item) => ({
@@ -48,7 +55,7 @@ const Summary = () => {
     //   }))
     // });
 
-    window.location = response.data.url;
+    //window.location = response.data.url;
   }
 
   return ( 

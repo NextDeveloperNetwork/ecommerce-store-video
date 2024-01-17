@@ -39,7 +39,7 @@ const HomePage = async () => {
         <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
           <Link
             href="/sellout"
-            className="block p-4 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
+            className="block p-2 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
             style={{
               backgroundImage: 'url("/images/action/A11.jpg")',
               backgroundSize: "cover",
@@ -53,7 +53,7 @@ const HomePage = async () => {
 
           <Link
             href="/oferta"
-            className="block p-4 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
+            className="block p-2 border border-gray-200 rounded-md hover:bg-gray-100 transition-transform transform hover:scale-105"
             style={{
               backgroundImage: 'url("/images/action/A12.jpg")',
               backgroundSize: "cover",

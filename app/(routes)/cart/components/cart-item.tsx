@@ -72,7 +72,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           <span className="mr-2">Cmimi:</span>
           <Currency value={data.price} />
         </div>
-        {/* <div className="flex items-center mt-4">
+        <div className="flex items-center mt-4">
           <h2 className="text-sm font-medium text-foreground mr-2">Sasia</h2>
           <div className="flex">
             <form className="max-w-xs mx-auto">
@@ -148,7 +148,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
               </p>
             </form>
           </div>
-        </div> */}
+        </div>
       </div>
     </li>
   );
