@@ -41,19 +41,6 @@ const Summary = () => {
        productIds: items.map((item) => item.id)
      });
 
-      // const products = items.map((item) => ({
-      //   id: item.id,
-      //   quantity: item.quantity,
-      // }))
-
-      // console.log(products)
-
-    // const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-    //   products: items.map((item) => ({
-    //     id: item.id,
-    //     quantity: item.quantity,
-    //   }))
-    // });
 
    window.location = response.data.url;
   }
