@@ -9,31 +9,56 @@ interface CartStore {
   items: Product[];
   addItem: (data: Product) => void;
   removeItem: (id: string) => void;
+  increaseQuantity: (id: string) => void;
+  decreaseQuantity: (id: string) => void;
+  getQuantity: (id: string) => number;
   removeAll: () => void;
 }
 
 const useCart = create(
   persist<CartStore>((set, get) => ({
-  items: [],
-  addItem: (data: Product) => {
-    const currentItems = get().items;
-    const existingItem = currentItems.find((item) => item.id === data.id);
-    
-    if (existingItem) {
-      return toast('Item already in cart.');
-    }
+    items: [],
+    addItem: (data: Product) => {
+      const currentItems = get().items;
+      const existingItemIndex = currentItems.findIndex((item) => item.id === data.id);
 
-    set({ items: [...get().items, data] });
-    toast.success('Item added to cart.');
-  },
-  removeItem: (id: string) => {
-    set({ items: [...get().items.filter((item) => item.id !== id)] });
-    toast.success('Item removed from cart.');
-  },
-  removeAll: () => set({ items: [] }),
-}), {
-  name: 'cart-storage',
-  storage: createJSONStorage(() => localStorage)
-}));
+      if (existingItemIndex !== -1) {
+        // If the item already exists, increment its quantity
+        const updatedItems = [...currentItems];
+        updatedItems[existingItemIndex].quantity += 1;
+        set({ items: updatedItems });
+        toast.success('Item quantity updated in cart.');
+      } else {
+        // If the item doesn't exist, add it with a quantity of 1
+        set({ items: [...currentItems, { ...data, quantity: 1 }] });
+        toast.success('Item added to cart.');
+      }
+    },
+    removeItem: (id: string) => {
+      set({ items: [...get().items.filter((item) => item.id !== id)] });
+      toast.success('Item removed from cart.');
+    },
+    removeAll: () => set({ items: [] }),
+    increaseQuantity: (id: string) => {
+      const updatedItems = get().items.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      set({ items: updatedItems });
+    },
+    decreaseQuantity: (id: string) => {
+      const updatedItems = get().items.map((item) =>
+        item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+      );
+      set({ items: updatedItems });
+    },
+    getQuantity: (id: string) => {
+      const item = get().items.find((item) => item.id === id);
+      return item ? item.quantity : 0;
+    },
+  }), {
+    name: 'cart-storage',
+    storage: createJSONStorage(() => localStorage),
+  })
+);
 
 export default useCart;

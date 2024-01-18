@@ -27,7 +27,7 @@ const Summary = () => {
 
   const deliveryCost = 300; 
   const totalPrice = items.reduce((total, item) => {
-      return total + Number(item.price);
+      return total + Number(item.price)*Number(item.quantity);
   }, 0);
   
 
@@ -38,8 +38,9 @@ const Summary = () => {
 
   const onCheckout = async () => {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
-     });
+       productIds: items.map((item) => item.id)
+    });
+  
 
     // const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
     //   products: items.map((item) => ({

@@ -16,7 +16,7 @@ interface CartItemProps {
 
 const CartItem: React.FC<CartItemProps> = ({ data }) => {
   const cart = useCart();
-  const [quantity, setQuantity] = useState(data.quantity || 0);
+  const [quantity, setQuantity] = useState(cart.getQuantity(data.id) || 0);
   const onRemove = () => {
     cart.removeItem(data.id);
   };
@@ -27,22 +27,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
       setQuantity(newQuantity); // Update the quantity in the component's state
     }
   };
-
-  const removeQuantity = () => {
-    const newQuantity = quantity - 1;
-    if (newQuantity >= 1) {
-      setQuantity(newQuantity); // Update the quantity in the component's state
-    }
-  };
-
-  const addQuantity = () => {
-    console.log(quantity)
-    const newQuantity = quantity + 1;
-    if (newQuantity <= 1000) {
-      setQuantity(newQuantity); // Update the quantity in the component's state
-    }
-  };
-
+const itemtotal = data.price* data.quantity ;
   return (
     <li className="flex py-6 border-b">
       <div className="relative h-24 w-24 rounded-md overflow-hidden sm:h-48 sm:w-48">
@@ -70,9 +55,9 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
         </div>
         <div className="flex items-center text-lg font-semibold text-black">
           <span className="mr-2">Cmimi:</span>
-          <Currency value={data.price} />
+          <Currency value={data.price} /> x {data.quantity} = {itemtotal}
         </div>
-        {/* <div className="flex items-center mt-4">
+        <div className="flex items-center mt-4">
           <h2 className="text-sm font-medium text-foreground mr-2">Sasia</h2>
           <div className="flex">
             <form className="max-w-xs mx-auto">
@@ -87,7 +72,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
                   type="button"
                   id="decrement-button"
                   data-input-counter-decrement="quantity-input"
-                  onClick={() => removeQuantity()}
+                  onClick={() => cart.decreaseQuantity(data.id)}
                   className="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
                 >
                   <svg
@@ -113,14 +98,14 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
                   aria-describedby="helper-text-explanation"
                   className="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="1"
-                  value={quantity}
+                  value={data.quantity}
                   required
                 />
                 <button
                   type="button"
                   id="increment-button"
                   data-input-counter-increment="quantity-input"
-                  onClick={() => addQuantity()}
+                  onClick={() => cart.increaseQuantity(data.id)}
                   className="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
                 >
                   <svg
@@ -148,7 +133,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
               </p>
             </form>
           </div>
-        </div> */}
+        </div>
       </div>
     </li>
   );
