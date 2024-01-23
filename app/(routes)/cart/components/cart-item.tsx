@@ -47,7 +47,7 @@ const itemtotal = data.price* data.quantity ;
            {data.description} 
         </div>
         <div className="text-sm font-italic text-gray-500 mb-2">
-          Sasia ne gjendje: {data.quantity} 
+          {/* Sasia ne gjendje: {data.quantity}  */}
         </div>
         <div className="flex items-center text-sm mb-2">
           <p className="text-gray-500">Ngjyra: {data.color.name}</p>
@@ -55,7 +55,7 @@ const itemtotal = data.price* data.quantity ;
         </div>
         <div className="flex items-center text-lg font-semibold text-black">
           <span className="mr-2">Cmimi:</span>
-          <Currency value={data.price} /> x {data.quantity} = {itemtotal}
+          <Currency value={data.price} />  <span className="text-red-700" > x </span>{data.quantity}cope <span className="text-red-700"> = </span> ALL {itemtotal}
         </div>
         <div className="flex items-center mt-4">
           <h2 className="text-sm font-medium text-foreground mr-2">Sasia</h2>
@@ -129,7 +129,7 @@ const itemtotal = data.price* data.quantity ;
                 id="helper-text-explanation"
                 className="mt-2 text-sm text-gray-500 dark:text-gray-400"
               >
-                Please select a 5 digit number from 0 to 9.
+                Percaktoni sasine qe doni te blini .
               </p>
             </form>
           </div>
