@@ -85,7 +85,7 @@ const ProductCard: React.FC<ProductCard> = ({
           <IconButton 
             onClick={onPreview} 
             icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
-            className="bg-green-500 text-white "
+            
           />
         </div>
       </div>
