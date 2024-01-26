@@ -80,31 +80,47 @@ const ProductCard: React.FC<ProductCard> = ({
         fill
         className="aspect-square object-cover rounded-md"
       />
-      <div className="opacity-20 group-hover:opacity-80 transition flex w-full px-1 py-1 bottom-5">
+      <div className="opacity-20 group-hover:opacity-70 transition flex w-full px-1 py-1 bottom-5">
         <div className="flex gap-x-6 justify-center ">
           <IconButton 
             onClick={onPreview} 
             icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
+            className="bg-green-500 text-white "
           />
         </div>
       </div>
     </div>
     {/* Description */}
-    <div className="text-center">
+    <div className="text-left">
       <p className="font-semibold text-lg text-gray-800 ">{truncatedName}</p>
-      <p className="text-sm text-gray-500 ">{truncatedDescription}</p>
+      {/* <p className="text-sm text-gray-500 ">{truncatedDescription}</p> */}
+      <div className="justify-between items-center flex">
+      <StarList raiting={averageRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {averageRating} <span className="text-black"> ) </span></div> 
+      </div>
+     
     </div>
     {/* Price & Review */}
     <div className="flex items-center justify-between">
       <div className="text-red-600 font-bold  py-4">
-        <Currency value={data?.price} />
+      <div className="text-gray-400 text-sm text-decoration: line-through">
+        <Currency value={data?.price/100*115} />  
       </div>
+        <Currency value={data?.price} />  
+      </div>
+      <div>
       <IconButton
-        onClick={onAddToCart} 
-        icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />} 
-      />
+              onClick={onAddToCart} 
+              text="Shto"
+              icon={<ShoppingCart 
+                size={20} 
+                className="text-gray-600 hover:text-white" 
+                />}
+                className="bg-green-500 text-white rounded-md"
+            />
+      </div>
+ 
     </div>
-    <StarList raiting={averageRating} />
+    
   </div>
   )
 }

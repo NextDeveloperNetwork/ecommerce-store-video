@@ -5,13 +5,14 @@ interface IconButtonProps{
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
     icon: React.ReactElement;
     className?: string;
-
+    text?: string
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
         onClick,
         icon,
-        className
+        className,
+        text
     })=>{
     return (
 <button
@@ -19,7 +20,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 onClick={onClick}
 className={cn("rounded-full flex items-center justify-center bg-white shadow-md p-2 hover:scale110 hover:bg-black hover:text-white transition",className)}
 >   
-
+{text}
 {icon}
 </button>
     );
