@@ -1,4 +1,5 @@
 export interface Product {
+  imageUrl: string | undefined;
   id: string;
   category: Category;
   subcategory:Subcategory;
@@ -11,9 +12,29 @@ export interface Product {
   isUndercost: boolean;
   size: Size;
   color: Color;
+  sizes: ProductSizes[];
+  colors: ProductColors[];
   images: Image[];
   comments: Comment[];
 };
+
+export interface ProductSizes {
+  value: any;
+
+  productId: string
+  size: Size
+  sizeId: string
+
+}
+
+export interface  ProductColors {
+  value: any;
+
+  productId: string
+  color: Color
+  colorId: string
+
+}
 
 export interface Image {
   id: string;
@@ -63,15 +84,17 @@ export interface Comment {
 }
 
 export interface  Order {
+  orderItems: any;
   id: string;
   storeId: string;
-
   isPaid: boolean;
   phone: string;
   address: string;
+  tracking:string;
+  status:string;
   userId: string;
-
   items: OrderItem[];
+  createdAt: Date;
 }
 
 // Intermediary for a many-to-many relationship
@@ -79,4 +102,7 @@ export interface OrderItem {
   id: string;
   orderId: string;
   productId: string;
+  metadata: any;
+  color:string
+  size: string
 }

@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCard> = ({
   data
 }) => {
   
-  const getRandomNumber = () => Math.floor(Math.random() * 6);
+  const getRandomNumber = () => Math.floor(Math.random() * 80);
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
@@ -100,7 +100,8 @@ const ProductCard: React.FC<ProductCard> = ({
      
     </div>
     {/* Price & Review */}
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between ">
+      
       <div className="text-red-600 font-bold  py-4">
       <div className="text-gray-400 text-sm text-decoration: line-through">
         <Currency value={data?.price/100*115} />  

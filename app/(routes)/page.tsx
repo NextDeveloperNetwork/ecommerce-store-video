@@ -14,7 +14,7 @@ export const revalidate = 0;
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard("12d8ef7e-b5c3-4c8e-888e-25ad7da2a3b4");
+  const billboard = await getBillboard("b8bf57ff-4150-4cf3-b6ed-8f14cd339b6d");
   const { userId } = await auth();
 
   console.log(userId);

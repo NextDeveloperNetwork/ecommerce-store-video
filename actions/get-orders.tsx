@@ -1,10 +1,12 @@
 import { Order } from "@/types";
 
+
 const URL=`${process.env.NEXT_PUBLIC_API_URL}/order`;
 
-const getOrders = async (externalid : string): Promise<Order[]> => {
-  const res = await fetch(`${URL}/user/${externalid}`);
+const getOrder = async (id: string): Promise<Order[]> => {
+  const res = await fetch(URL);
+
   return res.json();
 };
 
-export default getOrders;
+export default getOrder; 

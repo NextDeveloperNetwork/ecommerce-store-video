@@ -9,7 +9,10 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
 
-const Summary = () => {
+const Summary = ({userId}: {userId: string | undefined}) => {
+
+
+
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
@@ -30,7 +33,9 @@ const Summary = () => {
       return total + Number(item.price)*Number(item.quantity);
   }, 0);
   
-
+  if (!userId) {
+    return null
+  }
   const adjustedDeliveryCost = totalPrice === 0 ? 0 : (totalPrice > 3999 ? 0 : deliveryCost);
 
   
@@ -46,7 +51,10 @@ const Summary = () => {
        productsBought: items.map((item) => ({
          id: item.id,
          quantity: item.quantity,
-       }))
+         color: item.boughtColor,
+         size: item.boughtSize
+       })),
+       userId
     });
 
     window.location = response.data.url;
