@@ -49,6 +49,7 @@ const Comment = ({
 
       // Make the axios post request
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/products/${params.productId}/comment`, {userId: userId, message: values.message, rate: star},{ withCredentials: true });
+      window.location.reload();
     } catch (error) {
       // Handle any errors that occur during the submission
       console.error("Error submitting form:", error);

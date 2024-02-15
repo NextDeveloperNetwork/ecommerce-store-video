@@ -1,98 +1,136 @@
-"use client";
-
-import { useState } from 'react';
+"use client"
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const images = [
-  '/images/backgroundoffers.png',
-  '/images/backgroundsellout.png',
-  // Add more images as needed
-];
+interface CarouselProps {}
 
-const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+interface CarouselState {
+  currentSlide: number;
+}
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+const Carousel: React.FC<CarouselProps> = () => {
+  const [state, setState] = useState<CarouselState>({ currentSlide: 0 });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setState((prevState) => ({
+        ...prevState,
+        currentSlide: (prevState.currentSlide + 1) % 2,
+      }));
+    }, 15000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () => {
+    setState((prevState) => ({
+      ...prevState,
+      currentSlide: (prevState.currentSlide - 1 + 2) % 2,
+    }));
   };
 
-  const goToPrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const getDestinationPage = () => {
-    switch (currentIndex) {
-      case 0:
-        return '/oferta';
-      case 1:
-        return '/sellout';
-      // Add more cases for other images if needed
-      default:
-        return '/';
-    }
+  const nextSlide = () => {
+    setState((prevState) => ({
+      ...prevState,
+      currentSlide: (prevState.currentSlide + 1) % 2,
+    }));
   };
 
   return (
-    <div className="relative w-full h-full rounded-xl overflow-hidden">
-      <Link href={getDestinationPage()}>
-        <div className="relative w-full h-96 overflow-hidden rounded-xl cursor-pointer">
-          <Image
-            src={images[currentIndex]}
-            alt={`Image ${currentIndex + 1}`}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-md transition-transform duration-500 transform hover:scale-105"
+    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+      {/* Carousel wrapper */}
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        {/* Item 1 */}
+        <Link href="/sellout">
+         
+            <div
+              className={`duration-700 ease-in-out ${state.currentSlide === 0 ? 'block' : 'hidden'}`}
+              data-carousel-item
+            >
+              <Image src="/images/backgroundsellout.png" alt="Slide 1" layout="fill" objectFit="cover" />
+            </div>
+        
+        </Link>
+        {/* Item 2 */}
+        <Link href="/oferta">
+         
+            <div
+              className={`duration-700 ease-in-out ${state.currentSlide === 1 ? 'block' : 'hidden'}`}
+              data-carousel-item
+            >
+              <Image src="/images/backgroundoffers.png" alt="Slide 2" layout="fill" objectFit="cover" />
+            </div>
+        
+        </Link>
+      </div>
+      {/* Slider indicators */}
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        {[...Array(2)].map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`w-3 h-3 rounded-full ${state.currentSlide === index ? 'bg-blue-500' : 'bg-gray-300'}`}
+            aria-current={state.currentSlide === index ? 'true' : 'false'}
+            aria-label={`Slide ${index + 1}`}
+            data-carousel-slide-to={index}
           />
-        </div>
-      </Link>
-
+        ))}
+      </div>
+      {/* Slider controls */}
       <button
+        id="data-carousel-prev"
         type="button"
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 rounded-full p-3 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70 focus:outline-none z-10"
-        onClick={goToPrev}
+        className="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        onClick={prevSlide}
       >
-        <svg
-          className="w-6 h-6 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
+        <span
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
         >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M5 1 1 5l4 4"
-          />
-        </svg>
-        <span className="sr-only">Previous</span>
+          <svg
+            className="h-4 w-4 text-white dark:text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span className="hidden">Previous</span>
+        </span>
       </button>
-
       <button
+        id="data-carousel-next"
         type="button"
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 rounded-full p-3 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70 focus:outline-none z-10"
-        onClick={goToNext}
+        className="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        onClick={nextSlide}
       >
-        <svg
-          className="w-6 h-6 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
+        <span
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
         >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
-        <span className="sr-only">Next</span>
+          <svg
+            className="h-4 w-4 text-white dark:text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span className="hidden">Next</span>
+        </span>
       </button>
     </div>
   );

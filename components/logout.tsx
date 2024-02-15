@@ -21,30 +21,30 @@ const LogoutButton = () => {
   };
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <button
-        onClick={handleLogout}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: isHovered ? '#d32f2f' : '#f44336',
-          border: 'none',
-          color: 'white',
-          fontWeight: 'bold',
-          padding: '8px 16px',
-          borderRadius: '20px',
-          cursor: 'pointer',
-          transition: 'background-color 0.3s',
-          width: '100%', // Make the button full width
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span style={{ marginRight: '5px' }}>Logout</span>
-          <FiLogOut />
-        </div>
-      </button>
-    </div>
+    <button
+      onClick={handleLogout}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        backgroundColor: isHovered ? '#d32f2f' : '#f44336',
+        border: 'none',
+        color: 'white',
+        fontWeight: 'bold',
+        padding: '6px 12px', // Reduced padding
+        borderRadius: '20px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s',
+        width: '100%', // Make the button full width
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <span style={{ marginRight: '5px', fontSize: '14px' }}>Logout</span> {/* Reduced font size */}
+        <FiLogOut size={16} /> {/* Adjust the size of the icon */}
+      </div>
+    </button>
+  </div>
     
   );
 };

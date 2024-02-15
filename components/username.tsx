@@ -13,7 +13,7 @@ export default function Username() {
   }
   
   return (
-<div className="flex items-center space-x-4 p-4 border border-gray-300 rounded-lg shadow-md">
+<div className="flex items-center space-x-4 p-4 ">
       <div className="relative flex-shrink-0">
         <Image
           className="rounded-full border-2 border-blue-500"
