@@ -131,7 +131,7 @@ const OrderList: React.FC<OrderListProps> = ({ data, products }) => {
         
           <div className="relative flex justify-center bg-white px-4">
             <span className="text-red-500 bg-white px-2"> ^ Click on product to see details</span>
-            <hr className="my-2 border-t border-red-500" />
+            
           </div>
          
                     {expandedRows[`${index}-${itemIndex}`] && (
@@ -143,6 +143,7 @@ const OrderList: React.FC<OrderListProps> = ({ data, products }) => {
   <span className="text-black">Ngjyra: {item.color}</span>
   <span className="text-black">Masa: {item.size}</span>
   <span className="text-black">Adresa: {order.address ? order.address : "N/A"}</span>
+  <span className="text-black">Adresa: {order.phone ? order.phone : "N/A"}</span>
   <span className={`text-${order.status === 'Bllokuar' ? 'red' : 'black'}`}>
     Status: {order.status}
   </span>
