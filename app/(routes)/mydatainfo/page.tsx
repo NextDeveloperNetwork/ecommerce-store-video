@@ -9,7 +9,15 @@ const EdiStoreTerms = async () => {
         <h2 className="text-2xl font-bold mb-4">email accounts</h2>
         <p className="mb-4">
           elvis.simaku@yahoo.com
+         
+        </p>
+        <p className="mb-4">
+    
           store.edi.al@gmail.com
+       
+        </p>
+        <p className="mb-4">
+        
           g3albania.elvis@gmail.com
         </p>
       </div>
