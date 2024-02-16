@@ -128,14 +128,12 @@ const OrderList: React.FC<OrderListProps> = ({ data, products }) => {
                         {format(order.createdAt, "yyyy-MM-dd HH:mm:ss")}
                       </td>
                     </tr>
-                    <div className="w-full mt-2 relative">
-          <div className="absolute inset-0 flex items-center" aria-hidden="true">
-            <div className="w-full border-t border-red-500"></div>
-          </div>
+        
           <div className="relative flex justify-center bg-white px-4">
-            <span className="text-red-500 bg-white px-2">See Details</span>
+            <span className="text-red-500 bg-white px-2"> ^ Click on product to see details</span>
+            <hr className="my-2 border-t border-red-500" />
           </div>
-          </div>
+         
                     {expandedRows[`${index}-${itemIndex}`] && (
                       <tr>
                         <td colSpan={10}>
