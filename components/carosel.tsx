@@ -16,7 +16,7 @@ const Carousel: React.FC<CarouselProps> = () => {
     const interval = setInterval(() => {
       setState((prevState) => ({
         ...prevState,
-        currentSlide: (prevState.currentSlide + 1) % 2,
+        currentSlide: (prevState.currentSlide + 1) % 4,
       }));
     }, 15000); // Change image every 5 seconds
 
@@ -26,14 +26,14 @@ const Carousel: React.FC<CarouselProps> = () => {
   const prevSlide = () => {
     setState((prevState) => ({
       ...prevState,
-      currentSlide: (prevState.currentSlide - 1 + 2) % 2,
+      currentSlide: (prevState.currentSlide - 1 + 4) % 4,
     }));
   };
 
   const nextSlide = () => {
     setState((prevState) => ({
       ...prevState,
-      currentSlide: (prevState.currentSlide + 1) % 2,
+      currentSlide: (prevState.currentSlide + 1) % 4,
     }));
   };
 
@@ -48,7 +48,7 @@ const Carousel: React.FC<CarouselProps> = () => {
               className={`duration-700 ease-in-out ${state.currentSlide === 0 ? 'block' : 'hidden'}`}
               data-carousel-item
             >
-              <Image src="/images/backgroundsellout.png" alt="Slide 1" layout="fill" objectFit="cover" />
+              <Image src="/images/1.png" alt="Slide 1" layout="fill" objectFit="cover" />
             </div>
         
         </Link>
@@ -59,14 +59,36 @@ const Carousel: React.FC<CarouselProps> = () => {
               className={`duration-700 ease-in-out ${state.currentSlide === 1 ? 'block' : 'hidden'}`}
               data-carousel-item
             >
-              <Image src="/images/backgroundoffers.png" alt="Slide 2" layout="fill" objectFit="cover" />
+              <Image src="/images/Offerta.png" alt="Slide 2" layout="fill" objectFit="cover" />
             </div>
         
         </Link>
+        {/* Item 3 */}
+        <Link href="/subcategory/4e66ba96-7eb2-4a36-997e-983f778f7ead">
+         
+         <div
+           className={`duration-700 ease-in-out ${state.currentSlide === 2 ? 'block' : 'hidden'}`}
+           data-carousel-item
+         >
+           <Image src="/images/B8.png" alt="Slide 3" layout="fill" objectFit="cover" />
+         </div>
+     
+     </Link>
+      {/* Item 3 */}
+      <Link href="/category/4cd60b8b-9b44-48aa-b1ff-b0433ac2f714">
+         
+         <div
+           className={`duration-700 ease-in-out ${state.currentSlide === 3 ? 'block' : 'hidden'}`}
+           data-carousel-item
+         >
+           <Image src="/images/2.png" alt="Slide 4" layout="fill" objectFit="cover" />
+         </div>
+     
+     </Link>
       </div>
       {/* Slider indicators */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        {[...Array(2)].map((_, index) => (
+        {[...Array(4)].map((_, index) => (
           <button
             key={index}
             type="button"

@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from './ui/Button';
 import { PiUserThin } from "react-icons/pi";
+import { Users } from 'lucide-react';
 import { CiViewList } from "react-icons/ci";
 import Link from "next/link";
 import LogoutButton from './logout';
@@ -41,10 +42,12 @@ const UserMenu = () => {
     <div ref={menuRef}>
       <Button
         onClick={toggleMenu}
-        style={{ display: "flex", alignItems: "center", height: "40px" }}
+        className="bg-transparent text-black"
+         style={{ display: 'flex', alignItems: 'center', height: '40px' }}
       >
-        <PiUserThin style={{ marginRight: "5px" }} /> Llogaria
-      </Button>
+       <Users style={{ marginRight: '5px' }} /> 
+       </Button>
+      <span className="text-sm text-black hidden sm:block px-4">Llogaria</span>
 
       {isMenuOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md">
@@ -52,7 +55,7 @@ const UserMenu = () => {
             <li>
               <Username />
             </li>
-
+            <hr className="my-2 border-t border-gray-300" />
             <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
               <Link
                 href="/orders"
@@ -74,7 +77,7 @@ const UserMenu = () => {
                 <span>Settings</span>
               </Link>
             </li>
-
+            <hr className="my-2 border-t border-gray-300" />
             <LogoutButton />
           </ul>
         </div>

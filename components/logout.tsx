@@ -32,8 +32,8 @@ const LogoutButton = () => {
         border: 'none',
         color: 'white',
         fontWeight: 'bold',
-        padding: '6px 12px', // Reduced padding
-        borderRadius: '20px',
+        padding: '6px 9px', // Reduced padding
+        borderRadius: '15px',
         cursor: 'pointer',
         transition: 'background-color 0.3s',
         width: '100%', // Make the button full width

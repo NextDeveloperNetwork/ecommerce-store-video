@@ -16,10 +16,12 @@ const products = await getProducts({ isFeatured: true });
     <div className="max-w-7xl mx-auto p-8 bg-white rounded-md shadow-lg">
  
      <OrderList data={orders} products={product} />
-      
-      </div>
+     <div className="px-4 py-6 sm:px-6 lg:px-8">
       <ProductList title="Produkte" items={products} />
       </div>
+  </div>
+     
+</div>
   );
 };
 
