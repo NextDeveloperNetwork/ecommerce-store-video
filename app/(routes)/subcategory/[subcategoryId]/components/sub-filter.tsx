@@ -17,7 +17,9 @@ const Filter: React.FC<FilterProps> = ({
   data,
   name,
   valueKey,
+  
 }) => {
+ 
   const searchParams = useSearchParams();
   const router = useRouter();
 
