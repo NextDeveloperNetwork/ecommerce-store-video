@@ -31,7 +31,10 @@ const HomePage = async () => {
       <SubNavbar />
       <div className="space-y-1 pb-1 ">
         {/* <Billboard data={billboard} /> */}
+        <div>
         <Carousel/>
+        </div>
+      
         <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
   {/* <Link
     href="/sellout"

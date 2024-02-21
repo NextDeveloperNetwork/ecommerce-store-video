@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Column 4: Download App */}
-        <div className="text-center md:text-left">
+        {/* <div className="text-center md:text-left">
           <h4 className="text-xl font-semibold text-red-500">Download App</h4>
           <div className="flex items-center py-2">
             <FaAndroid className="text-blue-500 hover:text-blue-600 hover:animate-spin mr-2" /> Android
@@ -81,7 +81,7 @@ const Footer = () => {
           <div className="flex items-center py-2">
             <FaApple className="mr-2" /> iOS
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="text-center text-xs py-4">
         &copy; 2023 Store, Inc. All rights reserved.

@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCard> = ({
     cart.addItem(data, color, size);
     //cart.setColor(data.id, color);
 };
-  const mCharacters = 50; // Set the maximum number of characters
+  const mCharacters = 40; // Set the maximum number of characters
 
   const truncatedName =
     data.name && data.description.length > mCharacters
@@ -95,7 +95,7 @@ const ProductCard: React.FC<ProductCard> = ({
     </div>
     {/* Description */}
     <div className="text-left">
-      <p className="font-semibold text-lg text-gray-800 ">{truncatedName}</p>
+      <p className="font-semibold text-md text-gray-800 ">{truncatedName}</p>
       {/* <p className="text-sm text-gray-500 ">{truncatedDescription}</p> */}
       <div className="justify-between items-center flex">
       <StarList raiting={averageRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {averageRating} <span className="text-black"> ) </span></div> 
