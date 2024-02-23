@@ -9,11 +9,11 @@ const handleGoBack = () => {
 
 const Back=()=>{
     return(
-        <div className="px-0 py-2">
-<Button  onClick={handleGoBack}>
+        <div className="px-0 py-0">
+<Button className="bg-gray-300" onClick={handleGoBack}>
 {<FiChevronLeft  
     size={15}
-    color="white"
+    color="black"
      /> } 
          
         </Button>

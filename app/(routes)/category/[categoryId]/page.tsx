@@ -44,47 +44,46 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const category = await getCategory(params.categoryId);
 
   return (
-    <div className="bg-gray-100">
-      <Container>
-      <SubNavbar/>
-      
-      <div className="flex items-center gap-x-3 px-5 py-2">
-      <Back/>
-     
-      <div className="flex-grow "></div>
-      <MobileFiltersC subcategories={filteredSubcategories}/>
-      <MobileFilters subcategories={filteredSubcategories} />
-      </div>
-        <Billboard 
-          data={category.billboard}
+    <div className="bg-gray-100 min-h-screen">
+    <div className="grid grid-cols-1 lg:grid-cols-7">
+      {/* Menu (Filter) */}
+      <div className="hidden lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
+        
+        <Filter
+        
+          valueKey="subcategoryId"
+          name="Nenkategori"
+          data={filteredSubcategories}
         />
-      
-        <div className="px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
+      </div>
   
-            <div className="hidden lg:block">
-              <Filter
-                valueKey="subcategoryId" 
-                name="Nenkategori" 
-                data={filteredSubcategories}
-              />
-              
+      {/* Main Content */}
+      <div className="col-span-1 lg:col-span-5">
+        <Container>
+          <SubNavbar />
+  
+          <div className="flex items-center gap-x-3 px-5 py-1 lg:hidden">
+  <Back />
+  <div className="flex-grow"></div>
+  <MobileFilters subcategories={filteredSubcategories} />
+</div>
+          <Billboard data={category.billboard} />
+  
+          <div className="px-4 sm:px-6 lg:px-8 pb-24">
+            <div className="font-bold text-2xl px-2 py-2">
+              <h1>Produkte</h1>
             </div>
-            <div className="mt-6 lg:col-span-4 lg:mt-0">
-              <div className="font-bold text-2xl px-2 py-2">
-                <h1>Produkte</h1>
-              </div>
-              {products.length === 0 && <NoResults />}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {products.map((item) => (
-                  <ProductCard key={item.id} data={item} />
-                ))}
-              </div>
+            {products.length === 0 && <NoResults />}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {products.map((item) => (
+                <ProductCard key={item.id} data={item} />
+              ))}
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </div>
+  </div>
   );
 };
 

@@ -26,10 +26,10 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
   return (
     <>
       <Button
-       className="flex items-center rounded-full bg-black px-2 py-2"onClick={onOpen}
+       className="flex items-center rounded-full text-black bg-gray-300 px-2 py-2"onClick={onOpen}
       >
         Filtro
-        <Plus size={20}  color="white" />
+        <Plus size={20}  color="black" />
       </Button>
 
       <Dialog open={open} as="div" className="relative z-40 lg:hidden" onClose={onClose}>
