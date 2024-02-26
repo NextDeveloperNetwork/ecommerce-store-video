@@ -1,5 +1,6 @@
 import getBillboard from "@/actions/get-billboard";
 import getProducts from "@/actions/get-products";
+import getCategories from "@/actions/get-categories";
 import ProductList from "@/components/product-list";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
@@ -10,7 +11,7 @@ import MyCarousel from "@/components/carosel";
 import SliderPage from "@/components/ui/slider";
 import BrandSelect from "@/components/ui/brand-slider";
 import Carousel from "@/components/carosel";
-
+import MainNavSide from "@/components/main-nav-side";
 export const revalidate = 0;
 
 const HomePage = async () => {
@@ -18,7 +19,7 @@ const HomePage = async () => {
   const billboard = await getBillboard("5cac23fe-625f-4154-aa98-5c5b58804320");
   const { userId } = await auth();
 
-
+  const categories = await getCategories();
 
   if (!userId) {
     console.log("NOT LOGGED IN");
@@ -27,6 +28,12 @@ const HomePage = async () => {
   }
 
   return (
+    <div className="bg-gray-100 min-h-screen">
+   <div className="grid grid-cols-1 lg:grid-cols-7">
+   <div className="hidden lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
+            <MainNavSide data={categories}  />
+          </div>
+          <div className="col-span-1 lg:col-span-5">      
     <Container>
       <SubNavbar />
       <div className="space-y-1 pb-1 ">
@@ -75,6 +82,9 @@ const HomePage = async () => {
         <ProductList title="Produkte" items={products} />
       </div>
     </Container>
+    </div>
+    </div>
+    </div>
   );
 };
 
