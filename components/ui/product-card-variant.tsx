@@ -76,7 +76,7 @@ const ProductCardV: React.FC<ProductCardV> = ({
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105">
     <div className="flex">
       {/* Image */}
-      <div className="w-1/3 rounded-xl overflow-hidden bg-gray-200 relative mr-4">
+      <div className="w-3/5 rounded-xl overflow-hidden bg-gray-200 relative mr-4">
         <Image 
           src={data.images?.[0]?.url} 
           alt="" 
@@ -93,7 +93,7 @@ const ProductCardV: React.FC<ProductCardV> = ({
         </div>
       </div>
       {/* Title, Price, Rating, and Button */}
-      <div className="w-2/3 flex flex-col justify-between">
+      <div className="w-3/5 flex flex-col justify-between">
         <div className="text-left">
           <p className="font-semibold text-md text-gray-800">{truncatedName}</p>
           <div className="justify-between items-center flex">
