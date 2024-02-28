@@ -12,7 +12,7 @@ import getColors from '@/actions/get-colors';
 import Filter from './components/sub-filter';
 import MobileFilters from './components/sub-mobile-filters';
 import Back from '@/components/back';
-import NextBreadcrumb from '@/components/nextbreadcrumbs';
+
 
 export const revalidate = 0;
 
@@ -39,10 +39,11 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const sizes = await getSizes({subcategoryId: params.subcategoryId} );
   const colors = await getColors({subcategoryId: params.subcategoryId} );
   const subcategory = await getSubategory(params.subcategoryId);
+  
   console.log(colors)
   console.log(sizes)
   
-console.log("text",colors)
+console.log("text",products)
   return (
     <div className="bg-gray-100">
       <Container>
@@ -51,7 +52,7 @@ console.log("text",colors)
       <div className="flex items-center gap-x-3 px-5 py-1">
         <Back />
         <div className="flex-grow "></div>
-        {/* <MobileFilters sizes={sizes} colors={colors} /> */}
+       {/* <MobileFilters sizes={sizes} colors={colors} />  */}
         </div>
         <Billboard 
           data={subcategory.billboard}
@@ -59,9 +60,9 @@ console.log("text",colors)
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
           
-{/*             
+           
             <div className="hidden lg:block">
-              <Filter
+              {/* <Filter
                 valueKey="sizeId" 
                 name="Sizes" 
                 data={sizes}
@@ -70,8 +71,8 @@ console.log("text",colors)
                 valueKey="colorId" 
                 name="Colors" 
                 data={colors}
-              />
-            </div> */}
+              /> */}
+            </div> 
             <div className="mt-6 lg:col-span-4 lg:mt-0">
             <div className="font-bold text-2xl px-2 py-2">
                 <h1>Produkte</h1>

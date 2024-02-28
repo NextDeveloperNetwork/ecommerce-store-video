@@ -7,6 +7,7 @@ export default authMiddleware({
   publicRoutes: ["/", "/category(.*)", "/oferta(.*)", 
   "/sellout(.*)", "/product(.*)", "/search(.*)", 
   "/subcategory(.*)","/cart(.*)","/api/comment/undefined(.*)"],
+  ignoredRoutes: ["/((?!api|trpc))(_next.*|.+\.[\w]+$)", "/api/webhook/user"]
 });
  
 export const config = {

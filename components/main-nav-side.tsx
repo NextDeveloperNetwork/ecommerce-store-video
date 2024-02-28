@@ -6,17 +6,11 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Category,Subcategory } from "@/types";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
-
-
-
-
-
+import Icon from "./icon";
 
 
 interface MainNavSideProps {
   data: Category[];
-
- 
 }
 
 const MainNavSide: React.FC<MainNavSideProps> =   ({
@@ -74,19 +68,20 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
                 })}
               >
                 {route.label}
+                
               </Link>
             </div>
             {openCategory === index && (
               <ul className="pl-6">
                   {route.subcategories.map((subcategory) => (
-                    <li key={subcategory.id}>
+                    
+                    <li key={subcategory.id}>   
                       <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 border border-gray-600 shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md bg-gradient-to-r from-purple-400 to-blue-500 text-white font-semibold text-center">
-                        {subcategory.name}
+                        {subcategory.name}  
                       </a>
                     </li>
                   ))}
               </ul>
-              
             )}
           </li>
         ))}

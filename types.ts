@@ -46,12 +46,18 @@ export interface Billboard {
   label: string;
   imageUrl: string;
 };
-
+export interface Icon {
+  id: string;
+  label: string;
+  imageUrl: string;
+};
 
 export interface Category {
   id: string;
   name: string;
   billboard: Billboard;
+  iconId: string;
+  icon: Icon;
   subcategories: Subcategory[];
 };
 
@@ -59,6 +65,8 @@ export interface Subcategory {
   id: string;
   name: string;
   categoryId: string;
+  iconId: string;
+  icon: Icon;
   billboard: Billboard;
 };
 
