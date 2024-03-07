@@ -43,7 +43,7 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
           <li key={route.href} className="mb-2">
             <div
               className={cn(
-                'flex items-center w-full p-2 bg-white border font-bold border-gray-400 shadow-md rounded transition-colors',
+                'flex items-center w-full p-2 bg-white  font-bold  transition-colors',
                 route.active
                   ? 'text-black bg-blue-500 border border-gray-800'
                   : 'text-slate-500',
@@ -76,7 +76,10 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
                   {route.subcategories.map((subcategory) => (
                     
                     <li key={subcategory.id}>   
-                      <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 border border-gray-600 shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md bg-gradient-to-r from-purple-400 to-blue-500 text-white font-semibold text-center">
+                      <a href={`/subcategory/${subcategory.id}`} className="block px-4 py-2 border border-white  transition 
+                      duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 
+                      hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300
+                      rounded-md bg-gradient-to-r from-purple-200 to-blue-400 text-black font-semibold text-center">
                         {subcategory.name}  
                       </a>
                     </li>

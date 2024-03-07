@@ -46,48 +46,28 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
 console.log("text",products)
   return (
     <div className="bg-gray-100">
-      <Container>
-      <SubNavbar/>
-
-      <div className="flex items-center gap-x-3 px-5 py-1">
+    <Container >
+      <SubNavbar  />
+  
+      <div className="flex items-center justify-between px-5 py-1">
         <Back />
-        <div className="flex-grow "></div>
-       {/* <MobileFilters sizes={sizes} colors={colors} />  */}
+        {/* <div className="flex-grow"></div>
+          <MobileFilters sizes={sizes} colors={colors} /> */}
+      </div>
+      <Billboard
+        data={subcategory.billboard}
+        
+      />
+      <div className="px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {products.length === 0 && <NoResults />}
+          {products.map((item) => (
+            <ProductCard key={item.id} data={item} />
+          ))}
         </div>
-        <Billboard 
-          data={subcategory.billboard}
-        />
-        <div className="px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-          
-           
-            <div className="hidden lg:block">
-              {/* <Filter
-                valueKey="sizeId" 
-                name="Sizes" 
-                data={sizes}
-              />
-              <Filter 
-                valueKey="colorId" 
-                name="Colors" 
-                data={colors}
-              /> */}
-            </div> 
-            <div className="mt-6 lg:col-span-4 lg:mt-0">
-            <div className="font-bold text-2xl px-2 py-2">
-                <h1>Produkte</h1>
-              </div>
-              {products.length === 0 && <NoResults />}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {products.map((item) => (
-                  <ProductCard key={item.id} data={item} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
+  </div>
   );
 };
 

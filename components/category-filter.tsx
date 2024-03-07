@@ -29,8 +29,8 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
 
   return (
     <>
-    <Button className="flex flex-col items-center rounded-full bg-white px-0 py-2" onClick={onOpen}>
-  {<MenuIcon size={20} color="black" />}
+    <Button className="flex flex-col items-center bg-transparent rounded-full px-0 py-2" onClick={onOpen}>
+  {<MenuIcon size={25} color="black" />}
   <span className="text-sm text-black hidden sm:block">Menu</span>
 </Button>
     <Dialog open={open} as="div" className="relative z-40" onClose={onClose}>
@@ -48,7 +48,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
             <IconButton icon={<X size={15} />} onClick={onClose} />
           </div>
   
-          <div className="p-2">
+          <div className="p-2 ">
             <MainNavSide data={categories}  />
           </div>
 

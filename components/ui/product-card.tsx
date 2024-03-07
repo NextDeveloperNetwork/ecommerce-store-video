@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCard> = ({
     cart.addItem(data, color, size);
     //cart.setColor(data.id, color);
 };
-  const mCharacters = 40; // Set the maximum number of characters
+  const mCharacters = 25; // Set the maximum number of characters
 
   const truncatedName =
     data.name && data.description.length > mCharacters

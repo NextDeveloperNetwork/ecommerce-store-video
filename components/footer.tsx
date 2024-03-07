@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h4 className="text-xl font-semibold text-red-500">Contact Us</h4>
           <div className="flex items-center py-2">
-            <FaPhone className="mr-2" /> +355 698822191
+            <FaPhone className="mr-2" /> +355 692711177
           </div>
           <div className="flex items-center py-2">
             <FaEnvelope className="mr-2" /> store.edi.al@gmail.com
