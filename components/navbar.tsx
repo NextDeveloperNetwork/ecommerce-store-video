@@ -42,7 +42,7 @@ const Navbar = async () => {
       <NavbarSearch />
       </div>
       
-      <NavbarActions />
+      {/* <NavbarActions />
       <div>
       <div className="ml-auto flex items-center justify-center gap-x-4">
         {!userId &&(
@@ -62,7 +62,7 @@ const Navbar = async () => {
         )}
       </div>
      
-    </div>
+    </div> */}
     
     </div>
   </Container>

@@ -141,7 +141,13 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       </div>
 
       <div className="mt-8 flex gap-3 flex-col sm:flex-row items-center justify-between">
-            <button
+      <Button className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0" onClick={() => window.location.href = data?.link}>
+      <span className="flex items-center gap-2">
+                Bleje Tani
+                <ShoppingCart size={20} className="text-white" />
+              </span>
+        </Button>
+            {/* <button
               onClick={onAddToCart}
               className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0"
             >
@@ -149,7 +155,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
                 Add To Cart
                 <ShoppingCart size={20} className="text-white" />
               </span>
-            </button>
+            </button> */}
             <div className="flex gap-3 ">
               <button
                 onClick={onOpenMessenger}

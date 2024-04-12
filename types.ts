@@ -5,6 +5,7 @@ export interface Product {
   subcategory:Subcategory;
   name: string;
   description:string;
+  link: string;
   price: number;
   quantity: number;
   isFeatured: boolean;

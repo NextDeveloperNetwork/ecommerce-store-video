@@ -11,6 +11,8 @@ import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
 import { Product, Comment} from "@/types";
 import StarList from "./starlist";
+import Button from "./Button";
+import Link from "next/link";
 
 
 interface ProductCard {
@@ -22,7 +24,7 @@ const ProductCard: React.FC<ProductCard> = ({
   data
 }) => {
   
-  const getRandomNumber = () => Math.floor(Math.random() * 80);
+  const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
@@ -71,7 +73,7 @@ const ProductCard: React.FC<ProductCard> = ({
     data.description && data.description.length > maxCharacters
       ? `${data.description.substring(0, maxCharacters)}...`
       : data.description;
-  
+      const randomRating = getRandomNumber();
   return ( 
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105"
     >
@@ -98,7 +100,7 @@ const ProductCard: React.FC<ProductCard> = ({
       <p className="font-semibold text-md text-gray-800 ">{truncatedName}</p>
       {/* <p className="text-sm text-gray-500 ">{truncatedDescription}</p> */}
       <div className="justify-between items-center flex">
-      <StarList raiting={averageRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {averageRating} <span className="text-black"> ) </span></div> 
+      <StarList raiting={randomRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {averageRating} <span className="text-black"> ) </span></div> 
       </div>
      
     </div>
@@ -112,7 +114,14 @@ const ProductCard: React.FC<ProductCard> = ({
         <Currency value={data?.price} />  
       </div>
       <div>
-      <IconButton
+      <Button className="bg-blue-600 py-2 px-4" onClick={() => window.location.href = data?.link}>
+      <span className="flex items-center gap-2">
+                Bli
+                <ShoppingCart size={20} className="text-white" />
+              </span>
+</Button>
+
+      {/* <IconButton
               onClick={onAddToCart} 
               text="Shto"
               icon={<ShoppingCart 
@@ -120,7 +129,7 @@ const ProductCard: React.FC<ProductCard> = ({
                 className="text-gray-600 hover:text-white" 
                 />}
                 className="bg-green-500 text-white rounded-md"
-            />
+            /> */}
       </div>
  
     </div>
