@@ -31,7 +31,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
     <>
     <Button className="flex flex-col items-center bg-transparent rounded-full px-0 py-2" onClick={onOpen}>
   {<MenuIcon size={25} color="black" />}
-  <span className="text-sm text-black hidden sm:block">Menu</span>
+  <span className="text-sm text-black hidden sm:block">Kategori</span>
 </Button>
     <Dialog open={open} as="div" className="relative z-40" onClose={onClose}>
       
@@ -52,45 +52,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
             <MainNavSide data={categories}  />
           </div>
 
-          <div className="mt-auto">
-
-
-          <div className="text-center flex-auto items-center md:text-center flex flex-col">
-  <h4 className="text-xl font-semibold text-black-500">Socials</h4> {/* Red color */}
-  
-  <div className="flex items-center">
-    <a href="https://www.facebook.com/profile.php?id=61553134485424" target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center"> {/* Added this container */}
-        <FaFacebook className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-        <span>-facebook: EdiStore</span>
-      </div>
-    </a>
-  </div>
-
-  <div className="flex items-center">
-    <a href="https://www.instagram.com/edistoreal" target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center"> {/* Added this container */}
-        <FaInstagram className="text-blue-500 hover:text-blue-600 hover:animate-spin" /> 
-        <span>-Instagram: EdiStoreAl</span>
-      </div>
-    </a>
-  </div> {/* Blue color with hover effect */}
-
-  <div className="flex items-center">
-    <a href="https://www.tiktok.com/@edistoreal" target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center"> {/* Added this container */}
-        <FaTiktok className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
-        <span>-tik tok: edistoreal</span>
-      </div>
-    </a>
-  </div> {/* Blue color with hover effect */}
-</div>
-
-                    <div className="text-center text-xs py-4">
-                      &copy; 2023 Store, Inc. All rights reserved.
-                    </div>
-
-          </div>
+        
         </Dialog.Panel>
       </div>
     </Dialog>

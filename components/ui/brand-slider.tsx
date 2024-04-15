@@ -8,15 +8,15 @@ import Image from "next/image";
 import { useMediaQuery } from "@react-hook/media-query";
 
 const images = [
-  { src: "/images/brand/big/gewiss.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/b936e7e0-e977-4ce5-825f-a0f2eb13c5ae" },
-  { src: "/images/brand/big/hikoki.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/d97e36ca-f890-4412-8e5c-783187cd6e3a" },
-  { src: "/images/brand/big/legrand.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/37c21eff-b4f8-48a5-911e-01e716ff7760" },
-  { src: "/images/brand/big/siemens.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/407b6149-e2ab-43f2-b4c6-301171330891" },
-  { src: "/images/brand/big/Schneider.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/3203c1c7-94c5-4ace-8fd3-6d31b028ea24" },
-  { src: "/images/brand/big/Hager.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/b0ffc656-83ab-4e20-b3a4-caef0e510442" },
-  { src: "/images/brand/big/General.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/a4213878-912e-4cec-a3d4-5acf2a18b0bb" },
-  { src: "/images/brand/big/flex.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/d2d4853f-b839-41e3-a498-b8160a093bdc" },
-  { src: "/images/brand/big/BTicino.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/d2d4853f-b839-41e3-a498-b8160a093bdc" },
+  { src: "/images/brand/big/gewiss.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/e6e70fc6-c696-4eed-9e57-de7811a32dca" },
+  { src: "/images/brand/big/hikoki.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/1cbd4feb-f084-4a62-9543-44fc3f9cc417" },
+  { src: "/images/brand/big/legrand.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/2bc380c1-ff79-4c70-a316-4724092ae481" },
+  { src: "/images/brand/big/siemens.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/61c16163-7b4a-4e3e-a594-210559d81e2d" },
+  { src: "/images/brand/big/Schneider.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/3883ac47-934a-4600-a8e8-9d08a3b3612a" },
+  { src: "/images/brand/big/Hager.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/fc9e2843-b198-4c80-9fa5-32576dd6a080" },
+  { src: "/images/brand/big/General.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/7958dfc1-373a-4a66-af12-05fb30cd2d02" },
+  { src: "/images/brand/big/flex.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/d878b0ed-29c3-4497-8ec3-f5fae0c6072f" },
+  { src: "/images/brand/big/BTicino.png", alt: "Slide 1", link: "https://www.edi-store.shop/subcategory/4438a16d-2db5-4092-ac4a-68e9ac1c1632" },
 ];
 
 const BrandSelect = () => {

@@ -72,7 +72,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           <hr className="my-4" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <h3 className="font-semibold text-black">Colors:</h3>
               <select
                 value={selectedColor}
@@ -100,7 +100,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
                   </option>
                 ))}
               </select>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-black">Sasia ne gjendje:</h3>
@@ -114,10 +114,10 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           </div>
 
           <hr className="my-4" />
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <h3 className="font-semibold text-gray-700 italic">Posta:</h3>
         <div className="text-sm italic text-gray-400">Nese shuma kalon 4000 Leke posta eshte falas, ne rast te kundert kushton 300Leke</div>
-      </div>
+      </div> */}
       <div className="mt-6">
         <h3 className="font-semibold text-gray-700 italic">Dergesa:</h3>
         <div className="text-sm italic text-gray-400">Dergesa kryhet brenda 72-96 oreve! Brenda 3 diteve te punes , 

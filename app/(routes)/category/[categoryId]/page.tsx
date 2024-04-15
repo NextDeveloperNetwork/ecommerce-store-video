@@ -12,7 +12,7 @@ import MobileFiltersC from "@/components/category-filter-sub";
 import Back from '@/components/back';
 import SubNavbar from '@/components/subnavbar'
 import Icon from '@/components/icon';
-
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 export const revalidate = 0;
 
 interface CategoryPageProps {
@@ -48,6 +48,45 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
           name="Nenkategori"
           data={filteredSubcategories}
         />
+        <div className="mt-auto py-24">
+
+
+<div className="text-center flex-auto items-center md:text-center flex flex-col">
+<h4 className="text-xl font-semibold text-black-500">Socials</h4> {/* Red color */}
+
+<div className="flex items-center">
+<a href="https://www.facebook.com/profile.php?id=61553134485424" target="_blank" rel="noopener noreferrer">
+<div className="flex items-center"> {/* Added this container */}
+<FaFacebook className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
+<span>-facebook: EdiStore</span>
+</div>
+</a>
+</div>
+
+<div className="flex items-center">
+<a href="https://www.instagram.com/edistoreal" target="_blank" rel="noopener noreferrer">
+<div className="flex items-center"> {/* Added this container */}
+<FaInstagram className="text-blue-500 hover:text-blue-600 hover:animate-spin" /> 
+<span>-Instagram: EdiStoreAl</span>
+</div>
+</a>
+</div> {/* Blue color with hover effect */}
+
+<div className="flex items-center">
+<a href="https://www.tiktok.com/@edistoreal" target="_blank" rel="noopener noreferrer">
+<div className="flex items-center"> {/* Added this container */}
+<FaTiktok className="text-blue-500 hover:text-blue-600 hover:animate-spin" />
+<span>-tik tok: edistoreal</span>
+</div>
+</a>
+</div> {/* Blue color with hover effect */}
+</div>
+
+          <div className="text-center text-xs py-4">
+            &copy; 2023 Store, Inc. All rights reserved.
+          </div>
+
+</div>
       </div>
   
       {/* Main Content */}

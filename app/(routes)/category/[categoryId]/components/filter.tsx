@@ -55,7 +55,7 @@ const Filter: React.FC<FilterProps> = ({
       <div key={filter.id} className="flex items-center mb-2">
         <Button
           className={cn(
-            'rounded-md text-sm text-gray-800 p-2 border border-gray-300 transition duration-300 ease-in-out w-48',
+            'rounded-md text-sm text-gray-800 p-2 transition bg-gradient-to-r from-white to-slate-200 font-bold duration-300 ease-in-out w-48',
             selectedValue === filter.id ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md' : 'bg-white'
           )}
           onClick={() => onClick(filter.id)}

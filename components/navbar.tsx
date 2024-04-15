@@ -32,7 +32,7 @@ const Navbar = async () => {
         height={40}
       />
       </Link>
-      <MobileFilters categories={categories} />
+     
       <div className="hidden md:flex">
         {/* Hide on screens smaller than md (medium) */}
         
@@ -41,7 +41,7 @@ const Navbar = async () => {
       <div className="hidden md:flex" >
       <NavbarSearch />
       </div>
-      
+      <MobileFilters categories={categories} />
       {/* <NavbarActions />
       <div>
       <div className="ml-auto flex items-center justify-center gap-x-4">

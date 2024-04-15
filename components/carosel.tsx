@@ -64,7 +64,7 @@ const Carousel: React.FC<CarouselProps> = () => {
         
         </Link>
         {/* Item 3 */}
-        <Link href="/subcategory/4e66ba96-7eb2-4a36-997e-983f778f7ead">
+        <Link href="/subcategory/612bc62e-c663-4ffb-80d3-d4fb56b9b70a">
          
          <div
            className={`duration-700 ease-in-out ${state.currentSlide === 2 ? 'block' : 'hidden'}`}
@@ -75,7 +75,7 @@ const Carousel: React.FC<CarouselProps> = () => {
      
      </Link>
       {/* Item 3 */}
-      <Link href="/category/4cd60b8b-9b44-48aa-b1ff-b0433ac2f714">
+      <Link href="/category/7178afd8-f29c-4bac-84a6-e8511d6746a6">
          
          <div
            className={`duration-700 ease-in-out ${state.currentSlide === 3 ? 'block' : 'hidden'}`}
@@ -87,7 +87,7 @@ const Carousel: React.FC<CarouselProps> = () => {
      </Link>
       </div>
       {/* Slider indicators */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div className="absolute  flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         {[...Array(4)].map((_, index) => (
           <button
             key={index}
@@ -103,7 +103,7 @@ const Carousel: React.FC<CarouselProps> = () => {
       <button
         id="data-carousel-prev"
         type="button"
-        className="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        className="group absolute left-0 top-0  flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={prevSlide}
       >
         <span
@@ -130,7 +130,7 @@ const Carousel: React.FC<CarouselProps> = () => {
       <button
         id="data-carousel-next"
         type="button"
-        className="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        className="group absolute right-0 top-0  flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={nextSlide}
       >
         <span
