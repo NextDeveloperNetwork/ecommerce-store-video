@@ -11,6 +11,7 @@ import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
 import { Product, Comment} from "@/types";
 import StarList from "./starlist";
+import Button from "./Button";
 
 
 interface ProductCardV {
@@ -109,12 +110,18 @@ const ProductCardV: React.FC<ProductCardV> = ({
             <Currency value={data?.price} />
           </div>
           <div>
-            <IconButton
+          <Button className="bg-blue-600 py-2 px-4" onClick={() => window.location.href = data?.link}>
+      <span className="flex items-center gap-2">
+                Bli
+                <ShoppingCart size={20} className="text-white" />
+              </span>
+</Button>
+            {/* <IconButton
               onClick={onAddToCart} 
               text="Shto"
               icon={<ShoppingCart size={20} className="text-gray-600 hover:text-white" />}
               className="bg-green-500 text-white rounded-md"
-            />
+            /> */}
           </div>
         </div>
       </div>
