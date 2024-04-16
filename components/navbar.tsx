@@ -20,7 +20,7 @@ const Navbar = async () => {
   const categories = await getCategories();
  
   return (
-<div className="border-b sticky top-0 bg-gradient-to-r from-white to-blue-50 z-10">
+<div className="border-b sticky top-0 bg-gradient-to-b from-red-200 to-slate-200 z-10">
   <Container>
     <div className="mx-auto max-w-7xl relative flex items-center px-4 justify-between h-14">
     <Link href="/" className="flex items-center gap-x-2">
