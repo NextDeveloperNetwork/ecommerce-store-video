@@ -30,24 +30,23 @@ const HomePage = async () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-   <div className="grid grid-cols-1 lg:grid-cols-7">
-   <div className="hidden  lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
-            <MainNavSide data={categories}  />
-            
-          </div>
-          <div className="col-span-1 lg:col-span-5">      
-    <Container>
-      <SubNavbar />
-      <div className="space-y-1 pb-1 ">
-        {/* <Billboard data={billboard} /> */}
-        <div>
-          <div>
-          <Carousel/>
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-7">
+        <div className="hidden  lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
+          <MainNavSide data={categories} />
         </div>
-      
-        <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
-  {/* <Link
+        <div className="col-span-1 lg:col-span-5">
+          <Container>
+            <SubNavbar />
+            <div className="space-y-1 pb-1 ">
+              {/* <Billboard data={billboard} /> */}
+              <div>
+               
+                  <Carousel />
+              
+              </div>
+
+              <div className="px-5 grid grid-cols-2 gap-2 lg:gap-6">
+                {/* <Link
     href="/sellout"
     className="block p-2 border border-gray-200 rounded-md hover:shadow-lg transition-transform transform hover:scale-105 h-full"
     style={{
@@ -74,23 +73,17 @@ const HomePage = async () => {
       Oferta Combo
     </h5>
   </Link> */}
-</div>
-
-
-
-      </div>
-      <div className="py-2">
-        
-        <BrandSelect />
-        
-          
+              </div>
+            </div>
+            <div className="py-2">
+              <BrandSelect />
+            </div>
+            <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 ">
+              <ProductList title="Produkte" items={products} />
+            </div>
+          </Container>
         </div>
-      <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 ">
-        <ProductList title="Produkte" items={products} />
       </div>
-    </Container>
-    </div>
-    </div>
     </div>
   );
 };
