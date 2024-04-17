@@ -9,6 +9,7 @@ import BrandSelect from "@/components/ui/brand-slider";
 import Carousel from "@/components/carosel";
 import MainNavSide from "@/components/main-nav-side";
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
+import AdBanner from "@/components/adbanner";
 export const revalidate = 0;
 
 const HomePage = async () => {
@@ -65,6 +66,10 @@ const HomePage = async () => {
           <Container>
             <SubNavbar />
             <div className="space-y-1 pb-1">
+              <div className="bg-black"> 
+              <AdBanner dataAdFormat="auto" dataFullWidthResponsive={true} dataAdSlot="454545"/>
+              </div>
+            
               <Carousel />
             </div>
             <div className="py-2">
@@ -76,9 +81,17 @@ const HomePage = async () => {
           </Container>
         </div>
         {/* MainNavSide on the right */}
-        <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg"> {/* Adjusted width and added rounded corners */}
-         
-        </div>
+        <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg">
+  <div className="bg-black border-emerald-800 rounded-lg p-4">
+    <h2 className="text-white text-lg font-bold mb-2">Advertisement</h2>
+    <AdBanner
+      dataAdFormat="auto"
+      dataFullWidthResponsive={true}
+      dataAdSlot="454545"
+    />
+  </div>
+  
+</div>
       </div>
     </div>
   );
