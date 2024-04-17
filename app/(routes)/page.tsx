@@ -79,7 +79,8 @@ const HomePage = async () => {
         </div>
         {/* MainNavSide on the right */}
         <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg">
-  <div className=" border-emerald-800 rounded-lg p-4">
+ 
+  <div className="bg-gradient-to-r from-white to-blue-200 border-emerald-800 rounded-lg p-4">
     <h2 className="text-black text-lg font-bold mb-2">Advertisement</h2>
     <AdBanner
       dataAdFormat="auto"

@@ -73,7 +73,7 @@ const ProductCard: React.FC<ProductCard> = ({
     data.description && data.description.length > maxCharacters
       ? `${data.description.substring(0, maxCharacters)}...`
       : data.description;
-      const randomRating = getRandomNumber();
+  const randomRating = getRandomNumber();
   return ( 
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105"
     >
@@ -98,7 +98,7 @@ const ProductCard: React.FC<ProductCard> = ({
     {/* Description */}
     <div className="text-left">
       <p className="font-semibold text-md text-gray-800 ">{truncatedName}</p>
-      {/* <p className="text-sm text-gray-500 ">{truncatedDescription}</p> */}
+      <p className="text-sm text-gray-600">{data.description}</p>
       <div className="justify-between items-center flex">
       <StarList raiting={randomRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {randomRating} <span className="text-black"> ) </span></div> 
       </div>
