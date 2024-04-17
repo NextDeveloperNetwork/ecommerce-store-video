@@ -29,7 +29,7 @@ dataFullWidthResponsive
 <ins
  className="adsbygoogle"
 style={{display:'block'}}
-data-ad-client="ca-pub-12345678"
+data-ad-client="ca-pub-7384567519895340"
 data-ad-slot= {dataAdSlot}
 data-ad-format= {dataAdFormat}
 data-full-width-responsive= {dataFullWidthResponsive.toString()}

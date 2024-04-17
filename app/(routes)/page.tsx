@@ -66,10 +66,7 @@ const HomePage = async () => {
           <Container>
             <SubNavbar />
             <div className="space-y-1 pb-1">
-              <div className="bg-black"> 
-              <AdBanner dataAdFormat="auto" dataFullWidthResponsive={true} dataAdSlot="454545"/>
-              </div>
-            
+             
               <Carousel />
             </div>
             <div className="py-2">
@@ -82,12 +79,12 @@ const HomePage = async () => {
         </div>
         {/* MainNavSide on the right */}
         <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg">
-  <div className="bg-black border-emerald-800 rounded-lg p-4">
-    <h2 className="text-white text-lg font-bold mb-2">Advertisement</h2>
+  <div className=" border-emerald-800 rounded-lg p-4">
+    <h2 className="text-black text-lg font-bold mb-2">Advertisement</h2>
     <AdBanner
       dataAdFormat="auto"
       dataFullWidthResponsive={true}
-      dataAdSlot="454545"
+      dataAdSlot="5992574929"
     />
   </div>
   
