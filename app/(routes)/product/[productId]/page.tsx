@@ -61,15 +61,15 @@ const ProductPage: React.FC<ProductPageProps> = async({
         <Gall images={product?.images} />
     </div>
 </div>
- <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
-                  <div className="font-bold text-2xl px-2 py-2">
+ {/* <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                  {/* <div className="font-bold text-2xl px-2 py-2">
                      <h1>Vleresimi i produktit /Rating</h1>
                    </div>
                     <Comment userId={userId} />
                     <hr className="my-6" />
                   
                     <CommentList title="Komente" items={comments} />
-                  </div>                 
+                  </div>                  */} 
                   
                   <hr className="my-6" />
 

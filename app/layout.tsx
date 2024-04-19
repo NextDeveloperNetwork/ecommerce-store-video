@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    //<ClerkProvider>
     <html lang="en">
        <GoogleAnalytics GA_MEASUREMENT_ID='G-B8ZH8866VZ'/>
        <head>
@@ -41,7 +41,7 @@ export default function RootLayout({
       <Footer />
     </body>
   </html>
-  </ClerkProvider>
+  //</ClerkProvider>
 )
 }
 
