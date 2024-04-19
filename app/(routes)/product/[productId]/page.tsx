@@ -51,7 +51,17 @@ const ProductPage: React.FC<ProductPageProps> = async({
                     </div>
                   </div>
 
-                  {/* <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                
+<div className="bg-gradient-to-r from-red-500 to-yellow-500 rounded-lg shadow-md border-b-2">
+    <div className="p-6 md:p-8">
+        <h2 className="text-3xl font-bold mb-4 text-white border-b-2 pb-2">Specifikat e Produktit</h2>
+        <div className="text-white text-lg leading-relaxed mb-6">{product?.info}</div>
+    </div>
+    <div className="bg-white shadow-md p-6 rounded-lg">
+        <Gall images={product?.images} />
+    </div>
+</div>
+ <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
                   <div className="font-bold text-2xl px-2 py-2">
                      <h1>Vleresimi i produktit /Rating</h1>
                    </div>
@@ -59,17 +69,7 @@ const ProductPage: React.FC<ProductPageProps> = async({
                     <hr className="my-6" />
                   
                     <CommentList title="Komente" items={comments} />
-                  </div> */}
-                    
-                    <div className="bg-white rounded-lg shadow-md p-6 border-b-2">
-                    <h2 className="text-lg font-semibold mb-4 border-b-2 pb-2">Specifikat e Produktit</h2>
-                    <div className="text-sm">{product?.info}</div>
-                    <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
-                        <Gall images={product?.images} />
-                      </div>
-               
-                   </div>
-                    
+                  </div>                 
                   
                   <hr className="my-6" />
 
