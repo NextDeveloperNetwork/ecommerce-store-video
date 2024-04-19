@@ -5,6 +5,7 @@ export interface Product {
   subcategory:Subcategory;
   name: string;
   description:string;
+  info:String;
   link: string;
   price: number;
   quantity: number;
