@@ -57,7 +57,7 @@ const UserMenu = () => {
               <Username />
             </li>
             <hr className="my-2 border-t border-gray-300" />
-            <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
+            {/* <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
               <Link
                 href="/orders"
                 onClick={closeMenu}
@@ -66,7 +66,7 @@ const UserMenu = () => {
                 <CiViewList className="mr-1" />
                 <span>Porosite</span>
               </Link>
-            </li>
+            </li> */}
 
             <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
               <Link

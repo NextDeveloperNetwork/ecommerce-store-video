@@ -18,6 +18,18 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
+  const averageFunction = (comments: Comment[]) => {
+
+    if (!comments) {
+      return 0;
+    }
+
+    const sum = comments.reduce((acc, comment) => acc + comment.rate * 1, 0);
+    const count = comments.length;
+  
+    return count > 0 ? sum / count : 0;
+  };
+  const averageRating = averageFunction(data.comments);
   const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
   const randomRating = getRandomNumber();
   const handleClick = () => {
@@ -64,8 +76,8 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
           <p className="font-semibold text-md text-gray-800">{data.name}</p>
           <p className="text-sm text-gray-600">{data.description}</p>
           <div className="flex items-center">
-            <StarList raiting={randomRating} />
-            <span className="text-gray-500 italic ml-1">{`(${randomRating})`}</span>
+            <StarList raiting={averageRating} />
+            <span className="text-gray-500 italic ml-1">{`(${averageRating})`}</span>
           </div>
         </div>
         <div className="flex items-center justify-between">

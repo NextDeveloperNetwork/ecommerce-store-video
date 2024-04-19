@@ -100,7 +100,7 @@ const ProductCard: React.FC<ProductCard> = ({
       <p className="font-semibold text-md text-gray-800 ">{truncatedName}</p>
       <p className="text-sm text-gray-600">{data.description}</p>
       <div className="justify-between items-center flex">
-      <StarList raiting={randomRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {randomRating} <span className="text-black"> ) </span></div> 
+      <StarList raiting={averageRating} /> <div className="text-gray-500 italic"> <span className="text-black"> ( </span> {averageRating} <span className="text-black"> ) </span></div> 
       </div>
      
     </div>
