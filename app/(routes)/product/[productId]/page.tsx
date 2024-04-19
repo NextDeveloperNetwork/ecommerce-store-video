@@ -10,7 +10,8 @@ import Container from "@/components/ui/container";
 import Comment from "@/components/ui/comment";
 import CommentList from "@/components/ui/comment-list";
 import { auth } from "@clerk/nextjs";
-
+import NextImage from "next/image";
+import Gall from "@/components/imageInfo";
 
 interface ProductPageProps{
     params:{
@@ -61,9 +62,13 @@ const ProductPage: React.FC<ProductPageProps> = async({
                   </div> */}
                     
                     <div className="bg-white rounded-lg shadow-md p-6 border-b-2">
-    <h2 className="text-lg font-semibold mb-4 border-b-2 pb-2">Pershkrimi i Produktit</h2>
-    <div className="text-sm">{product?.info}</div>
-</div>
+                    <h2 className="text-lg font-semibold mb-4 border-b-2 pb-2">Specifikat e Produktit</h2>
+                    <div className="text-sm">{product?.info}</div>
+                    <div className="bg-white shadow-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg">
+                        <Gall images={product?.images} />
+                      </div>
+               
+                   </div>
                     
                   
                   <hr className="my-6" />
