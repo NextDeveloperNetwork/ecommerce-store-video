@@ -10,7 +10,7 @@ const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
     <div className="flex flex-wrap justify-center">
       {images.map((image) => (
         <div key={image.id} className="m-4">
-          <div className="relative h-64 w-64 sm:h-80 sm:w-80 overflow-hidden rounded-md shadow-md">
+          <div className="relative h-96 w-96 sm:h-96 sm:w-96 overflow-hidden rounded-md shadow-md">
             <NextImage
               src={image.url}
               alt="Image"

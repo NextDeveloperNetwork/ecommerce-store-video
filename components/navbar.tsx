@@ -44,7 +44,7 @@ const Navbar = async () => {
       <MobileFilters categories={categories} />
       {/* <NavbarActions />  */}
       <div>
-      {/* <div className="ml-auto flex items-center justify-center gap-x-4">
+       <div className="ml-auto flex items-center justify-center gap-x-4">
         {!userId &&(
           <>
 <Link href='/sign-in' className="text-gray-300 hover:text-black mr-4 py-2">
@@ -60,8 +60,7 @@ const Navbar = async () => {
          {userId && (
           <UserMenue/> 
         )}
-      </div> */}
-     
+      </div> 
     </div> 
     
     </div>
