@@ -1,7 +1,7 @@
 import getProducts from "@/actions/get-products";
 import getCategories from "@/actions/get-categories";
 import ProductList from "@/components/product-list";
-
+import React from 'react';
 import Container from "@/components/ui/container";
 import SubNavbar from "@/components/subnavbar";
 

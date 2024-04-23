@@ -85,11 +85,11 @@ const ProductCard: React.FC<ProductCard> = ({
         fill
         className="aspect-square object-cover rounded-md"
       />
-      <div className="opacity-20 group-hover:opacity-70 transition flex w-full px-1 py-1 bottom-5">
+      <div className="opacity-60 group-hover:opacity-80 transition flex w-full px-1 py-1 bottom-5">
         <div className="flex gap-x-6 justify-center ">
           <IconButton 
             onClick={onPreview} 
-            icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
+            icon={<Expand size={20} className="text-white hover:text-white" />}
             
           />
         </div>

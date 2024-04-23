@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MouseEventHandler } from "react";
 import { Expand, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -18,20 +17,18 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
   const previewModal = usePreviewModal();
   const cart = useCart();
   const router = useRouter();
-  const averageFunction = (comments: Comment[]) => {
 
-    if (!comments) {
-      return 0;
-    }
+  const averageFunction = (comments: Comment[]) => {
+    if (!comments) return 0;
 
     const sum = comments.reduce((acc, comment) => acc + comment.rate * 1, 0);
     const count = comments.length;
-  
+
     return count > 0 ? sum / count : 0;
   };
+
   const averageRating = averageFunction(data.comments);
-  const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
-  const randomRating = getRandomNumber();
+
   const handleClick = () => {
     router.push(`/product/${data?.id}`);
   };
@@ -43,57 +40,57 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-    const color = data.colors[0].color.name; // Assuming colors is an array and you want the first color
-    const size = data.sizes[0].size.name;
+    const color = data.colors[0]?.color.name; // Assuming colors is an array and you want the first color
+    const size = data.sizes[0]?.size.name;
     cart.addItem(data, color, size);
   };
+  const mCharacters = 25; // Set the maximum number of characters
 
+  const truncatedName =
+    data.name && data.description.length > mCharacters
+      ? `${data.name.substring(0, mCharacters)}...`
+      : data.name;
   return (
     <div
       onClick={handleClick}
-      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 shadow-md transition-transform transform hover:scale-105 flex"
+      className="bg-white group cursor-pointer rounded-xl border p-2 md:p-3 space-y-2 shadow-md transition-transform transform hover:scale-105 flex flex-col md:flex-row"
     >
       {/* Image */}
-      <div className="w-1/3 rounded-xl overflow-hidden bg-gray-200 relative mr-4">
-        <Image
-          src={data.images?.[0]?.url}
-          alt=""
-          fill
-          className="object-cover rounded-md h-full"
-        />
-        <div className="opacity-20 group-hover:opacity-70 transition flex w-full px-1 py-1 bottom-5">
-          <div className="flex gap-x-6 justify-center">
-            <IconButton
-              onClick={onPreview}
-              icon={<Expand size={20} className="text-gray-600 hover:text-white" />}
-            />
-          </div>
-        </div>
-      </div>
+      <div className="md:w-1/3 md:mr-4 rounded-md overflow-hidden bg-gray-200 relative">
+  <img
+    src={data.images?.[0]?.url}
+    alt=""
+    className="object-cover w-full h-full"
+  />
+  <div className="absolute opacity-70 group-hover:opacity-80 top-0 left-0 p-2">
+    <IconButton
+      onClick={onPreview}
+      icon={<Expand size={20} className="text-white hover:text-white" />}
+    />
+  </div>
+  <div className="opacity-30 group-hover:opacity-80 transition flex w-full px-1 py-1 absolute bottom-0">
+    {/* Other elements inside the bottom of the image */}
+  </div>
+</div>
       {/* Title, Price, Rating, and Button */}
-      <div className="w-2/3 flex flex-col justify-between">
+      <div className="md:w-2/3 flex flex-col justify-between flex-grow">
         <div className="text-left">
-          <p className="font-semibold text-md text-gray-800">{data.name}</p>
-          <p className="text-sm text-gray-600">{data.description}</p>
-          <div className="flex items-center">
-            <StarList raiting={averageRating} />
-            <span className="text-gray-500 italic ml-1">{`(${averageRating})`}</span>
-          </div>
+          <p className="font-semibold text-sm md:text-md text-gray-800 mb-1">{truncatedName }</p>
+          {/* <StarList raiting={averageRating} />
+          <span className="text-gray-500 text-xs">{`(${averageRating})`}</span>
+          <p className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">{data.description}</p> */}
         </div>
-        <div className="flex items-center justify-between">
-          <div className="text-red-600 font-bold py-2">
-            <div className="text-gray-400 text-sm line-through">
-              <Currency value={data?.price / 100 * 115} />
-            </div>
+        <div className="flex items-center justify-between mt-1 md:mt-2">
+          <div className="text-red-600 font-bold">
             <Currency value={data?.price} />
           </div>
           <Button
-            className="bg-blue-600 py-2 px-4"
+            className="bg-blue-600 py-1 px-2 md:px-3 text-xs md:text-sm"
             onClick={() => window.location.href = data?.link}
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-1">
               Bli
-              <ShoppingCart size={20} className="text-white" />
+              <ShoppingCart size={16} className="text-white" />
             </span>
           </Button>
         </div>
