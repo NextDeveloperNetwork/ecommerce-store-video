@@ -12,36 +12,32 @@ import getColors from '@/actions/get-colors';
 import Filter from './components/sub-filter';
 import MobileFilters from './components/sub-mobile-filters';
 import Back from '@/components/back';
+import getSubsub from '@/actions/get-subsub';
 
 
 export const revalidate = 0;
 
 interface CategoryPageProps {
   params: {
+    subsubId: string,
     subcategoryId: string;
     categoryId: string;
-  },
-  searchParams: {
-    colorId: string;
-    sizeId: string;
   }
+
 }
 
 const CategoryPage: React.FC<CategoryPageProps> = async ({ 
   params, 
-  searchParams
+
 }) => {
   const products = await getProducts({ 
-    subcategoryId: params.subcategoryId,
-    colorId: searchParams.colorId,
-    sizeId: searchParams.sizeId,
+    subsubId: params.subcategoryId,
+ 
   });
-  const sizes = await getSizes({subcategoryId: params.subcategoryId} );
-  const colors = await getColors({subcategoryId: params.subcategoryId} );
-  const subcategory = await getSubategory(params.subcategoryId);
+
+  const subsub = await getSubsub(params.subsubId);
   
-  console.log(colors)
-  console.log(sizes)
+
   
 console.log("text",products)
   return (
@@ -51,11 +47,11 @@ console.log("text",products)
   
       <div className="flex items-center justify-between px-5 py-1">
         <Back />
-        <div className="flex-grow"></div>
-          <MobileFilters sizes={sizes} colors={colors} /> 
+        {/* <div className="flex-grow"></div>
+          <MobileFilters sizes={sizes} colors={colors} /> */}
       </div>
       <Billboard
-        data={subcategory.billboard}
+        data={subsub.billboard}
         
       />
       <div className="px-4 sm:px-6 lg:px-8 pb-24">

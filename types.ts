@@ -3,6 +3,7 @@ export interface Product {
   id: string;
   category: Category;
   subcategory:Subcategory;
+  subsub:Subsub;
   name: string;
   description:string;
   info:String;
@@ -64,14 +65,24 @@ export interface Category {
 };
 
 export interface Subcategory {
+  
   id: string;
   name: string;
   categoryId: string;
   iconId: string;
   icon: Icon;
   billboard: Billboard;
+  subsubs: Subsub[];
+  href: string; 
 };
-
+export interface Subsub{
+  id: string;
+  name: string;
+  subcategoryId: string;
+  iconId: string;
+  icon: Icon;
+  billboard: Billboard;
+};
 export interface Size {
   id: string;
   name: string;
