@@ -50,9 +50,9 @@ const Navbar = async () => {
 <Link href='/sign-in' className="text-gray-300 hover:text-black mr-4 py-2">
   <Button className="bg-transparent text-black" style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
     <Users style={{ marginRight: '5px' }} />
-    
+    <span className="text-sm text-black hidden sm:block px-4">LogIn</span>
   </Button>
-  <span className="text-sm text-black hidden sm:block px-4">LogIn</span>
+  
 </Link>
        
           </>

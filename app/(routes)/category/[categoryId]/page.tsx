@@ -43,7 +43,6 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
       <div className="hidden lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
         
         <Filter
-        
           valueKey="subcategoryId"
           name="Nenkategori"
           data={filteredSubcategories}
@@ -112,8 +111,13 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
               ))}
             </div>
           </div>
+        
         </Container>
       </div>
+      {/* Right Menu (Filter) */}
+  <div className="hidden lg:block lg:col-span-1 lg:w-1/7 bg-white shadow-md p-4 ">
+   
+  </div>
     </div>
   </div>
   );

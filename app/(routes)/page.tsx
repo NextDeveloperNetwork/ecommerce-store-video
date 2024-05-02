@@ -1,9 +1,12 @@
 import getProducts from "@/actions/get-products";
 import getCategories from "@/actions/get-categories";
+import getSizes from '@/actions/get-sizes';
+import getColors from '@/actions/get-colors';
 import ProductList from "@/components/product-list";
 import React from 'react';
 import Container from "@/components/ui/container";
 import SubNavbar from "@/components/subnavbar";
+
 
 import BrandSelect from "@/components/ui/brand-slider";
 import Carousel from "@/components/carosel";
@@ -20,7 +23,7 @@ const HomePage = async () => {
     <div className="bg-gray-100 min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4"> {/* Adjusted number of columns and added gap */}
         {/* MainNavSide on the left */}
-        <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg"> {/* Adjusted width and added rounded corners */}
+        <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg "> {/* Adjusted width and added rounded corners */}
           <MainNavSide data={categories} />
       
           <div className="mt-auto py-24 ">
@@ -79,16 +82,18 @@ const HomePage = async () => {
         </div>
         {/* MainNavSide on the right */}
         <div className="hidden lg:block lg:col-span-2 bg-white shadow-md p-4 rounded-lg">
- 
+{/*  
   <div className="bg-gradient-to-r from-white to-blue-200 border-emerald-800 rounded-lg p-4">
-    {/* <h2 className="text-black text-lg font-bold mb-2">Advertisement</h2>
+     <h2 className="text-black text-lg font-bold mb-2">Advertisement</h2>
     <AdBanner
       dataAdFormat="auto"
       dataFullWidthResponsive={true}
       dataAdSlot="5992574929"
-    /> */}
+    /> 
+
+
   </div>
-  
+   */}
 </div>
       </div>
     </div>
