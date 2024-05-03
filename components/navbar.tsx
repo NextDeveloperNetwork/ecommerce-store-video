@@ -65,10 +65,10 @@ const Navbar = async () => {
     </div> 
     
     </div>
-    <SubNavbar />
-    
+   
+
   </Container>
-  
+  <SubNavbar />
 </div>
   );
 
