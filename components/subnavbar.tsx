@@ -7,7 +7,7 @@ const SubNavbar = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="border-b  bg-black top-0 z-10">
+    <div className="border-b  bg-black top-0 ">
       <Container>
         <div className="mx-auto max-w-7xl flex h-12 items-center px-4 justify-between relative">
           <div className="hidden sm:block ">

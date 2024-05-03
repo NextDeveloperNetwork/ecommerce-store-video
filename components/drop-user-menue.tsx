@@ -54,7 +54,7 @@ const UserMenu = () => {
      
 
       {isMenuOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md">
+        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md z-10">
           <ul className="list-none p-2">
           
             <li>
