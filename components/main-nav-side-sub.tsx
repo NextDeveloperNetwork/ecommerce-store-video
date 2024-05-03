@@ -42,8 +42,8 @@ const MainNavSideSub: React.FC<MainNavSideProps> = ({
               className={cn(
                 'flex items-center w-full p-2 bg-white border font-bold border-gray-400 shadow-md rounded transition-colors',
                 route.active
-                  ? 'text-black bg-blue-500 border border-gray-800'
-                  : 'text-slate-500',
+                  ? 'text-slate-500 bg-blue-500 border border-gray-800'
+                  : 'text-black',
               )}
             >
               <span

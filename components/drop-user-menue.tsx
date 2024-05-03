@@ -8,6 +8,9 @@ import Link from "next/link";
 import LogoutButton from './logout';
 import Username from '@/components/username'
 
+
+
+ 
 const UserMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -46,8 +49,9 @@ const UserMenu = () => {
          style={{ display: 'flex', alignItems: 'center', height: '40px' }}
       >
        <Users style={{ marginRight: '5px' }} /> 
+       <span className="text-sm text-black hidden sm:block px-4">Llogaria</span>
        </Button>
-      <span className="text-sm text-black hidden sm:block px-4">Llogaria</span>
+     
 
       {isMenuOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md">
@@ -55,6 +59,7 @@ const UserMenu = () => {
           
             <li>
               <Username />
+             
             </li>
             <hr className="my-2 border-t border-gray-300" />
             {/* <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">

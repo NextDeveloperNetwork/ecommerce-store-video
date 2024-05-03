@@ -9,7 +9,7 @@ import MobileFilters from "./components/mobile-filters";
 import Back from "@/components/back";
 import getSizesSearch from "@/actions/get-sizes-search";
 import getColorsSearch from "@/actions/get-colors-search";
-import SubNavbar from "@/components/subnavbar";
+
 
 export const revalidate = 0;
 
@@ -46,7 +46,7 @@ console.log("text", sizes)
     return ( 
         <div className="bg-gray-100">
             <Container>
-            <SubNavbar/>
+            
             <div className="flex items-center gap-x-3 px-5 py-2">
       <Back/>
       <div className="flex-grow "></div>

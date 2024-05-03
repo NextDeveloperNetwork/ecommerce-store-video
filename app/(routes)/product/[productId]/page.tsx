@@ -1,7 +1,6 @@
 import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products";
 import getComments from "@/actions/get-comment";
-import SubNavbar from '@/components/subnavbar'
 import Back from "@/components/back";
 import Gallery from "@/components/gallery";
 import Info from "@/components/info";
@@ -33,7 +32,7 @@ const ProductPage: React.FC<ProductPageProps> = async({
             return (
               <div className="bg-gray-100">
                 <Container>
-                  <SubNavbar />
+             
                   <div className="px-4">
                     <Back />
                   </div>

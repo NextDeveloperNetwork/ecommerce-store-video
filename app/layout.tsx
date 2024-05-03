@@ -11,6 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import CookieBanner from '@/components/cookiebanner';
 import AdSense from '@/components/adSense'
+import SubNavbar from '@/components/subnavbar'
 
 const font = Urbanist({ subsets: ['latin'] })
 

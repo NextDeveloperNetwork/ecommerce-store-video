@@ -18,7 +18,8 @@ export const revalidate = 0;
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
   const categories = await getCategories();
-
+  
+  const truncatedAndShuffledProducts = products.slice(0, 200).sort(() => Math.random() - 0.5);
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4"> {/* Adjusted number of columns and added gap */}
@@ -67,7 +68,7 @@ const HomePage = async () => {
         </div>
         <div className="col-span-1 lg:col-span-8">
           <Container>
-            <SubNavbar />
+            {/* <SubNavbar /> */}
             <div className="space-y-1 pb-1">
              
               <Carousel />
@@ -76,7 +77,7 @@ const HomePage = async () => {
               <BrandSelect />
             </div>
             <div className="flex flex-col gap-y-8"> {/* Removed px values to allow natural spacing */}
-              <ProductList title="Produkte" items={products} />
+              <ProductList title="Produkte" items={truncatedAndShuffledProducts} />
             </div>
           </Container>
         </div>

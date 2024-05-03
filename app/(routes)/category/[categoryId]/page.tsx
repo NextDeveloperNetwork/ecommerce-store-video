@@ -10,7 +10,6 @@ import getSubcategories from '@/actions/get-subcategories';
 import MobileFilters from '../../category/[categoryId]/components/mobile-filters';
 import MobileFiltersC from "@/components/category-filter-sub";
 import Back from '@/components/back';
-import SubNavbar from '@/components/subnavbar'
 import Icon from '@/components/icon';
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 export const revalidate = 0;
@@ -91,7 +90,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
       {/* Main Content */}
       <div className="col-span-1 lg:col-span-5">
         <Container>
-          <SubNavbar />
+         
   
           <div className="flex items-center gap-x-3 px-5 py-1 lg:hidden">
   <Back />

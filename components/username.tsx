@@ -1,6 +1,6 @@
 "use client";
-import { useUser } from "@clerk/nextjs";
 
+import { useUser } from '@clerk/clerk-react'
 import Image from "next/image";
 import React from "react";
 

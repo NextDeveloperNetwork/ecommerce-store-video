@@ -12,6 +12,7 @@ import MobileFilters from "./category-filter";
 import NavbarSearch from "./search-bar/navbar-search";
 import Image from "next/image";
 import UserMenue from "./drop-user-menue";
+import SubNavbar from "./subnavbar";
 
 
 const Navbar = async () => {
@@ -20,9 +21,9 @@ const Navbar = async () => {
   const categories = await getCategories();
  
   return (
-<div className="border-b sticky top-0 bg-gradient-to-b from-red-200 to-slate-200 z-10">
+<div className="border-b sticky top-0 bg-black z-10">
   <Container>
-    <div className="mx-auto max-w-7xl relative flex items-center px-4 justify-between h-14">
+    <div className="mx-auto max-w-7xl relative flex items-center px-4 justify-between h-14 border rounded-lg bg-white">
     <Link href="/" className="flex items-center gap-x-2">
       <Image
      
@@ -65,6 +66,7 @@ const Navbar = async () => {
     
     </div>
   </Container>
+  <SubNavbar />
 </div>
   );
 

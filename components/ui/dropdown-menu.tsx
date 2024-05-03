@@ -65,7 +65,7 @@ const DropdownMenu = ({
       <div key={subcategory.id}>
         <a
           href={`/subcategory/${subcategory.id}`}
-          className="flex items-center justify-between px-2 py-2 text-sm font-semibold transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-500 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md"
+          className="flex items-center justify-between px-2 py-2 text-sm font-semibold transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300 rounded-md"
           style={{ transitionProperty: 'background, transform, box-shadow', transitionDuration: '0.3s' }}
         >
           <span>{subcategory.name}</span>

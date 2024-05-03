@@ -45,8 +45,8 @@ const MainNavSide: React.FC<MainNavSideProps> =   ({
               className={cn(
                 'flex items-center w-full p-2 bg-gradient-to-r from-white to-slate-200 shadow-md font-bold  transition-colors',
                 route.active
-                  ? 'text-black bg-blue-500 border border-gray-800'
-                  : 'text-slate-500',
+                  ? 'text-slate-600 bg-blue-500 border border-gray-800'
+                  : 'text-black',
               )}
             >
               <span

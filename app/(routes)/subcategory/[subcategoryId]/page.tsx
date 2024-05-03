@@ -2,7 +2,7 @@ import Container from "@/components/ui/container";
 import Billboard from "@/components/billboard";
 import ProductCard from "@/components/ui/product-card";
 import NoResults from "@/components/ui/no-results";
-import SubNavbar from "@/components/subnavbar";
+
 import getProducts from "@/actions/get-products";
 import getSubcategory from "@/actions/get-subcategory";
 import getSizes from "@/actions/get-sizes";
@@ -115,7 +115,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
         </div>
         <div className="col-span-1 lg:col-span-5">
           <Container>
-            <SubNavbar />
+           
 
             <div className="flex items-center justify-between px-5 py-1">
               <Back />
