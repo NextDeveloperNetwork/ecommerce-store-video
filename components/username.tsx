@@ -1,8 +1,9 @@
 "use client";
 
-import { useUser } from "@clerk/nextjs"
-import Image from "next/image";
 import React from "react";
+import { useUser,ClerkLoaded,ClerkLoading } from "@clerk/nextjs"
+import Image from "next/image";
+import { Loader2 } from "lucide-react";
 
 
 export default function Username() {
@@ -23,13 +24,18 @@ export default function Username() {
           src={user?.imageUrl || "/default-user-image.png"} // Provide a default image URL or use a placeholder image
         />
       </div>
-      
+      <ClerkLoaded>
       <div>
         <h3 className="text-sm font-semibold text-gray-400">Perdoruesi:</h3>
         <p className=" text-lg font-semibold text-gray-800">{isLoaded?",":""}{user?.firstName}👌</p>
         
         {/* Add other user information if needed */}
       </div>
+      </ClerkLoaded>
+      <ClerkLoading>
+            <Loader2 className='size-8 animate-spin text-slate-400'/>
+      </ClerkLoading>
+
     </div>
   );
 };
