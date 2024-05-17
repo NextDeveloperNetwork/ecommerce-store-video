@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.27.2",
+    "@clerk/nextjs": "^4.30.1",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
     "@react-hook/media-query": "^1.1.1",
@@ -21,7 +21,7 @@
     "flowbite": "^2.1.1",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.292.0",
-    "next": "14.0.2",
+    "next": "^14.2.3",
     "query-string": "^8.1.0",
     "react": "^18",
     "react-bootstrap": "^2.9.0-beta.1",
