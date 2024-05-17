@@ -8,6 +8,7 @@ import useCart from "@/hooks/use-cart";
 import { Product, Comment } from "@/types";
 import StarList from "./starlist";
 import Button from "./Button";
+import Image from "next/image";
 
 interface ProductCardVProps {
   data: Product;
@@ -57,7 +58,7 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
     >
       {/* Image */}
       <div className="md:w-1/3 md:mr-4 rounded-md overflow-hidden bg-gray-200 relative">
-  <img
+  <Image
     src={data.images?.[0]?.url}
     alt=""
     className="object-cover w-full h-full"
