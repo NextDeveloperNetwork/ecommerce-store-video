@@ -72,7 +72,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           <hr className="my-4" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2">
               <h3 className="font-semibold text-black">Colors:</h3>
               <select
                 value={selectedColor}
@@ -100,7 +100,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
                   </option>
                 ))}
               </select>
-            </div> */}
+            </div> 
 
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-black">Sasia ne gjendje:</h3>
@@ -114,10 +114,10 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           </div>
 
           <hr className="my-4" />
-      {/* <div className="mt-6">
+     <div className="mt-6">
         <h3 className="font-semibold text-gray-700 italic">Posta:</h3>
         <div className="text-sm italic text-gray-400">Nese shuma kalon 4000 Leke posta eshte falas, ne rast te kundert kushton 300Leke</div>
-      </div> */}
+      </div> 
       <div className="mt-6">
         <h3 className="font-semibold text-gray-700 italic">Dergesa:</h3>
         <div className="text-sm italic text-gray-400">Dergesa kryhet brenda 72-96 oreve! Brenda 3 diteve te punes , 
@@ -141,13 +141,13 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       </div>
 
       <div className="mt-8 flex gap-3 flex-col sm:flex-row items-center justify-between">
-      <Button className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0" onClick={() => window.location.href = data?.link}>
+      {/* <Button className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0" onClick={() => window.location.href = data?.link}>
       <span className="flex items-center gap-2">
                 Bleje Tani
                 <ShoppingCart size={20} className="text-white" />
               </span>
-        </Button>
-            {/* <button
+        </Button> */}
+           <button
               onClick={onAddToCart}
               className="bg-blue-500 text-white hover:bg-blue-600 px-4 md:px-6 py-2 md:py-3 rounded-md transition mb-2 sm:mb-0"
             >
@@ -155,7 +155,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
                 Add To Cart
                 <ShoppingCart size={20} className="text-white" />
               </span>
-            </button> */}
+            </button> 
             <div className="flex gap-3 ">
               <button
                 onClick={onOpenMessenger}
