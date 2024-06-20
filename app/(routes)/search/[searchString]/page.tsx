@@ -50,16 +50,16 @@ console.log("text", sizes)
             <div className="flex items-center gap-x-3 px-5 py-2">
       <Back/>
       <div className="flex-grow "></div>
-                <MobileFilters
+                {/* <MobileFilters
                             sizes={sizes}
                             colors={colors}
-                        /> 
-                        </div>
+                        /> */}
+                        </div> 
                 <div className="pt-2 px-4 sm:px-6 lg:px-8 pb-24">
                     <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
                 
                         
-                      <div className="hidden lg:block">
+                      {/* <div className="hidden lg:block">
                             <Filter
                                 valueKey="sizeId"
                                 name="Sizes"
@@ -70,7 +70,7 @@ console.log("text", sizes)
                                 name="Colors"
                                 data={colors}
                             />
-                        </div> 
+                        </div>  */}
                         <div className="mt-6 lg:col-span-4 lg:mt-0">
                             {products.length === 0 && <NoResults />}
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">

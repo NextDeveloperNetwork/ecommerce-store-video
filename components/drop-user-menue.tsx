@@ -53,13 +53,12 @@ const UserMenu = () => {
      
 
       {isMenuOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md z-10">
+        <div className="absolute right-0 -mt-12 w-48 bg-white border rounded shadow-md z-10">
           <ul className="list-none p-2">
-          
-            <li>
-              <Username />
-             
-            </li>
+                <li className="truncate">
+                  <Username />
+                </li>
+
             <hr className="my-2 border-t border-gray-300" />
          <li className="cursor-pointer py-2 px-4 hover:bg-gray-200">
               <Link

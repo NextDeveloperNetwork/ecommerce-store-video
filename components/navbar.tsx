@@ -38,10 +38,12 @@ const Navbar = async () => {
           <div className="hidden md:flex">
             <NavbarSearch />
           </div>
-        
+          <div className="mt-2">
           <NavbarActions />
+          </div>
+          
           <div>
-            <div className="ml-auto flex items-center justify-center gap-x-4">
+            <div className="ml-auto flex items-center justify-center gap-x-4 mt-1">
               {!userId && (
                 <>
                   <Link

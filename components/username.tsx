@@ -25,11 +25,12 @@ export default function Username() {
         />
       </div>
       <ClerkLoaded>
-      <div>
-        <h3 className="text-sm font-semibold text-gray-400">Perdoruesi:</h3>
-        <p className=" text-lg font-semibold text-gray-800">{isLoaded?",":""}{user?.firstName}👌</p>
-        
-        {/* Add other user information if needed */}
+      <div className="">
+        <h3 className="text-sm font-semibold text-gray-600">Perdoruesi:</h3>
+            <p className="text-lg font-semibold text-gray-800 ">
+              {isLoaded ? "," : ""}
+              {user?.firstName}
+            </p>
       </div>
       </ClerkLoaded>
       <ClerkLoading>
