@@ -81,7 +81,7 @@ const ProductCard: React.FC<ProductCard> = ({
     <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 relative">
       <Image 
         src={data.images?.[0]?.url} 
-        alt="" 
+        alt="image" 
         fill
         className="aspect-square object-cover rounded-md"
       />
@@ -114,22 +114,22 @@ const ProductCard: React.FC<ProductCard> = ({
         <Currency value={data?.price} />  
       </div>
       <div>
-      <Button className="bg-blue-600 py-2 px-4" onClick={() => window.location.href = data?.link}>
+     {/*  <Button className="bg-blue-600 py-2 px-4" onClick={() => window.location.href = data?.link}>
       <span className="flex items-center gap-2">
                 Bli
                 <ShoppingCart size={20} className="text-white" />
               </span>
-</Button>
+</Button> */}
 
-      {/* <IconButton
+      <IconButton
               onClick={onAddToCart} 
               text="Shto"
               icon={<ShoppingCart 
                 size={20} 
-                className="text-gray-600 hover:text-white" 
+                className="text-white " 
                 />}
-                className="bg-green-500 text-white rounded-md"
-            /> */}
+                className="bg-blue-500 text-white rounded-lg"
+            /> 
       </div>
  
     </div>

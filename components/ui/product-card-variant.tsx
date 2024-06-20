@@ -61,6 +61,7 @@ const ProductCardV: React.FC<ProductCardVProps> = ({ data }) => {
   <Image
     src={data.images?.[0]?.url}
     alt=""
+    fill
     className="object-cover w-full h-full"
   />
   <div className="absolute opacity-70 group-hover:opacity-80 top-0 left-0 p-2">

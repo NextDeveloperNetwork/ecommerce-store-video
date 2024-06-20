@@ -43,14 +43,13 @@ const UserMenu = () => {
 
   return (
     <div ref={menuRef}>
-      <Button
+        <Button
         onClick={toggleMenu}
-        className="bg-transparent text-black"
-         style={{ display: 'flex', alignItems: 'center', height: '40px' }}
+        className="bg-transparent text-black flex flex-col items-center justify-center h-40"
       >
-       <Users style={{ marginRight: '5px' }} /> 
-       <span className="text-sm text-black hidden sm:block px-4">Llogaria</span>
-       </Button>
+        <Users style={{ marginBottom: '5px' }} />
+        <span className="text-sm text-black hidden sm:block">Llogaria</span>
+      </Button>
      
 
       {isMenuOpen && (

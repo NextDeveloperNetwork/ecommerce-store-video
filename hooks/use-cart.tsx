@@ -11,6 +11,7 @@ interface ProductCart extends Product {
 }
 
 interface CartStore {
+  [x: string]: any;
   items: ProductCart[];
   addItem: (data: Product, color: string, size: string) => void;
   removeItem: (id: string) => void;

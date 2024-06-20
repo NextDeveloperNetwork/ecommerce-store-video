@@ -10,6 +10,7 @@ import CartItem from './components/cart-item';
 import { useUser } from '@clerk/nextjs';
 
 
+
 //export const revalidate = 0;
 
 const CartPage = () => {
@@ -42,6 +43,10 @@ const CartPage = () => {
             <Summary userId={user?.id} />
           </div>
         </div>
+        <div>
+
+   
+    </div>
       </Container>
     </div>
   )

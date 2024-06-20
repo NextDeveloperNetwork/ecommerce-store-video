@@ -56,6 +56,7 @@ export interface Icon {
 };
 
 export interface Category {
+  slug: any;
   id: string;
   name: string;
   billboard: Billboard;
