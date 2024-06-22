@@ -5,6 +5,7 @@ import OrderList from "@/components/order-list";
 import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 
+export const revalidate = 0;
 const Orders = async () => {
 const orders = await getOrder("");
 const product = await getProducts({});
