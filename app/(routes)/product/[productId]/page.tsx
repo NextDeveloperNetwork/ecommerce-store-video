@@ -12,6 +12,8 @@ import { auth } from "@clerk/nextjs";
 import NextImage from "next/image";
 import Gall from "@/components/imageInfo";
 
+export const revalidate = 0;
+
 interface ProductPageProps{
     params:{
         productId:string;

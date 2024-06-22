@@ -26,7 +26,6 @@ const Comment = ({
     resolver: zodResolver(formSchema),
     defaultValues: {
         message: "",
-      
     },
 });
   const params = useParams()
